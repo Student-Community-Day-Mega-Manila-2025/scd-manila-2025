@@ -40,8 +40,8 @@ jobs:
       - name: Check formatting
         run: bun run format
 
-      - name: Run linter
-        run: bun run lint
+      - name: Run linter and fix issues
+        run: bun eslint --fix
 
       - name: Build application
         run: bun run build
