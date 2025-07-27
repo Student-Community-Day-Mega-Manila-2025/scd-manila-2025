@@ -1,0 +1,47 @@
+name: Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  format:
+    run-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        id: cache-deps
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: List dependencies
+        if: ${{ steps.cache-deps.outputs.cache-hit != 'true' }}
+        continue-on-error: true
+        run: bun pm ls
+
+      - name: Install dependencies
+        run: bun ci
+
+      - name: Run type checking
+        run: bun run check-types
+
+      - name: Check formatting
+        run: bun run format
+
+      - name: Run linter
+        run: bun run lint
+
+      - name: Build application
+        run: bun run build
