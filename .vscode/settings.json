@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "prettier.configPath": ".prettierrc",
+  "prettier.prettierPath": "./node_modules/prettier",
+  "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "eslint.useFlatConfig": true
+}

@@ -1,26 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #071311; /* Dark Teal */
+  --foreground: #01d5a4; /* Caribbean Green */
+  --secondary: #ebe128; /* Lemon Yellow */
+  --accent: #4395ad; /* soft blue-teal */
+  --error: #df2a5d; /* amaranth */
+  --subtle: #a5a3aa; /* spun pearl */
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-error: var(--error);
+  --color-subtle: var(--subtle);
+
+  /* Refer to the Tonal Palette in Figma */
+  --color-primary-0: #001510;
+  --color-primary-100: #002b21;
+  --color-primary-200: #005542;
+  --color-primary-300: #018062;
+  --color-primary-400: #01aa83;
+  --color-primary-500: #01d5a4;
+  --color-primary-600: #34ddb6;
+  --color-primary-700: #67e6c8;
+  --color-primary-800: #99eedb;
+  --color-primary-900: #b3f2e4;
+
+  --color-secondary-100: #2f2d08;
+  --color-secondary-200: #5e5a10;
+  --color-secondary-300: #8d8718;
+  --color-secondary-400: #bcb420;
+  --color-secondary-500: #ebe128;
+  --color-secondary-600: #efe753;
+  --color-secondary-700: #f3ed7e;
+  --color-secondary-800: #f7f3a9;
+  --color-secondary-900: #f9f6bf;
+
+  --color-supporting-100: #05140d;
+  --color-supporting-200: #0a291a;
+  --color-supporting-300: #103d27;
+  --color-supporting-400: #155234;
+  --color-supporting-500: #1a6641;
+  --color-supporting-600: #488567;
+  --color-supporting-700: #76a38d;
+  --color-supporting-800: #a3c2b3;
+  --color-supporting-900: #bad1c6;
+
+  --color-accent-100: #0d1e23;
+  --color-accent-200: #1b3c45;
+  --color-accent-300: #285968;
+  --color-accent-400: #36778a;
+  --color-accent-500: #4395ad;
+  --color-accent-600: #69aabd;
+  --color-accent-700: #8ebfce;
+  --color-accent-800: #b4d5de;
+  --color-accent-900: #c7dfe6;
+
+  --color-subtle-100: #1c1b1c;
+  --color-subtle-200: #313031;
+  --color-subtle-300: #484647;
+  --color-subtle-400: #5f5e5e;
+  --color-subtle-500: #787677;
+  --color-subtle-600: #929090;
+  --color-subtle-700: #adaaab;
+  --color-subtle-800: #c9c6c6;
+  --color-subtle-900: #e5e1e2;
+
+  --text-lg: 19.2px;
+  --text-base: 16px;
+  --text-sm: 13.33px;
+  --text-xs: 11.11px;
+
+  /* Fonts */
+  --font-heading: var(--font-heading), serif;
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 63.96px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 45.23px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 31.99px;
 }
