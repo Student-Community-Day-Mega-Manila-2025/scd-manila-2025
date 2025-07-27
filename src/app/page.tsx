@@ -11,6 +11,7 @@ import Venue from "@/components/sections/venue";
 export default function Home() {
   return (
     <main>
+      <p>testing</p>
       <Hero />
       <EventInfo />
       <Venue />
