@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 oven/bun:alpine AS builder
+FROM oven/bun:alpine AS builder
 
 ARG APP_DIR=/app
 WORKDIR ${APP_DIR}
@@ -13,7 +13,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 
 RUN bun run build
 
-FROM --platform=linux/arm64 oven/bun:alpine AS runner
+FROM oven/bun:alpine AS runner
 
 RUN apk update && apk add --no-cache shadow && \
     addgroup --system --gid 1001 bunuser && \
