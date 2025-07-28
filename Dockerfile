@@ -2,7 +2,7 @@
 
 # --- Builder Stage ---
 # Use an official Bun Alpine image from Docker Hub for building
-FROM oven/bun:alpine AS builder
+FROM --platform=linux/arm64 oven/bun:alpine AS builder
 
 # Set build argument for the application directory (used for WORKDIR within this stage)
 ARG APP_DIR=/app
@@ -25,7 +25,7 @@ RUN bun run build
 
 # --- Runner Stage ---
 # Use a lean Bun Alpine image for the final production container
-FROM oven/bun:alpine AS runner
+FROM --platform=linux/arm64 oven/bun:alpine AS runner
 
 # Create a non-root user and group for security best practices
 RUN addgroup --system --gid 1001 bunuser && \
