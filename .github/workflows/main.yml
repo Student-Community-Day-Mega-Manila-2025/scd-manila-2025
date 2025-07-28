@@ -88,8 +88,8 @@ jobs:
 
       - name: Update Lambda function container image
         run: |
-          # Update the Lambda function to use the newly pushed ECR image (tagged as 'latest')
-          aws lambda update-function-configuration \
+          # Use update-function-code to change the container image
+          aws lambda update-function-code \
             --function-name ${{ env.LAMBDA_FUNCTION_NAME }} \
             --image-uri ${{ steps.login-ecr.outputs.registry }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
         env:
