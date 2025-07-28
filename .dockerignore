@@ -1,0 +1,44 @@
+# Git
+.git
+.gitignore
+
+# Node.js / Bun modules
+node_modules/
+bun.lockb # If you're explicitly using bun.lock rather than bun.lockb, or both, adjust accordingly.
+bun.lock # Keep this if you're using the older bun.lock format
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Next.js build output
+.next/ # This is crucial. We build .next/ inside the Docker container.
+.next/cache/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker specific files (the Dockerfile itself, and any build context helper scripts)
+Dockerfile
+docker-compose.yml
+.dockerignore
+.docker/
+
+# Editor and IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS specific files
+.DS_Store
+
+# Common temporary files
+tmp/
+*.log
+*.bak
+*.swp
