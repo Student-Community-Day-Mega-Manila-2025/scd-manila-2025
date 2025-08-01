@@ -38,9 +38,10 @@
     ]
   },
   "dependencies": {
+    "next": "15.4.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "next": "15.4.3"
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
@@ -60,6 +61,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
+    "next": "15.4.3",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "tailwindcss": "^4",
     "typescript": "^5"
