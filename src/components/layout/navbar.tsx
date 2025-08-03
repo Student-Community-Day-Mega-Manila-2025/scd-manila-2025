@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import HamburgerIcon from "./HamburgerIcon";
 import { FaChevronRight } from "react-icons/fa";
 import RegisterNowButton from "../common/RegisterNowButton";
@@ -84,12 +85,13 @@ const Navbar: React.FC = () => {
           className="absolute left-1/2 flex -translate-x-1/2 items-center no-underline sm:static sm:left-auto sm:translate-x-0"
           aria-label="Go to home section"
         >
-          <img
-            src="/title-notilt 1.png"
+          <Image
+            src="/title-notilt%201.png"
             alt="Mega Manila 2025 Logo"
             width={48}
             height={48}
             className="h-12 w-auto object-contain"
+            priority
           />
         </a>
         <ul className="m-0 hidden list-none gap-8 p-0 sm:flex">
