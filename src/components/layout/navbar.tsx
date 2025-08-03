@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-0 border-b border-[rgba(1,213,164,0.25)] bg-[var(--background)] px-8 py-4 font-sans shadow-md">
+    <nav className="sticky top-0 z-50 border-b border-[rgba(1,213,164,0.25)] bg-[var(--background)] px-8 py-4 font-sans shadow-md">
       <div className="relative mx-auto flex h-16 max-w-screen-xl items-center gap-4 sm:gap-8">
         <div className="z-10 mr-2 sm:hidden">
           <HamburgerIcon
@@ -113,7 +113,7 @@ const Navbar: React.FC = () => {
           <RegisterNowButton href="#register" />
         </div>
         {menuOpen && (
-          <div className="animate-fade-in fixed inset-0 top-25 h-[60vh] w-full overflow-y-auto bg-[var(--background)] sm:hidden">
+          <div className="animate-fade-in fixed inset-0 top-25 z-50 h-[60vh] w-full overflow-y-auto bg-[var(--background)] sm:hidden">
             <ul className="flex flex-col items-start gap-2 p-4">
               {NAV_LINKS.map((link) => {
                 const id = link.href.replace("#", "");
