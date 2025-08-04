@@ -140,7 +140,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="mt-8 border-t border-gray-700 pt-6 pb-4 sm:mt-10 sm:pt-7 sm:pb-6 lg:mt-12 lg:pt-8 lg:pb-8">
+      <div className="sm: mt-8 border-t border-gray-700 pt-6 sm:mt-10 sm:pt-7 lg:mt-12 lg:pt-8">
         <p className="font-inter px-4 text-center text-[11px] text-white sm:text-[16px] lg:text-[16px]">
           © 2025 AWS Cloud Club Philippines. All rights reserved.
         </p>
