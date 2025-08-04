@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap"); */
+
 @import "tailwindcss";
 
 :root {
@@ -71,13 +73,17 @@
   --color-subtle-800: #c9c6c6;
   --color-subtle-900: #e5e1e2;
 
+  --text-3xl: 63.96px;
+  --text-2xl: 45.23px;
+  --text-xl: 31.99px;
   --text-lg: 19.2px;
   --text-base: 16px;
   --text-sm: 13.33px;
   --text-xs: 11.11px;
 
   /* Fonts */
-  --font-heading: var(--font-heading), serif;
+  --font-heading: var(--font-cinzel-decorative), serif;
+  --font-subheading: var(--font-cinzel), serif;
   --font-sans: var(--font-inter);
 }
 
@@ -113,4 +119,13 @@ h2 {
 h3 {
   font-weight: 400;
   font-size: 31.99px;
+}
+
+.bg-default-borderline {
+  background: linear-gradient(
+    119deg,
+    #01d5a5 2.58%,
+    #99eedb 59.86%,
+    #529db3 93.48%
+  );
 }

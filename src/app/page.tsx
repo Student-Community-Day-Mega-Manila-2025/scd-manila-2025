@@ -10,8 +10,7 @@ import Venue from "@/components/sections/venue";
 
 export default function Home() {
   return (
-    <main>
-      <p>testing from ci-cd</p>
+    <main className="px-2 lg:px-16">
       <Hero />
       <EventInfo />
       <Venue />
