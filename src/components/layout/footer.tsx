@@ -19,7 +19,7 @@ const Footer = () => {
                   height={64}
                   className="h-12 w-auto self-center object-contain sm:h-14 sm:self-start lg:h-16"
                 />
-                <p className="font-cinzel text-center text-[20px] leading-tight font-bold text-white sm:text-left sm:text-[24px] lg:text-[32px]">
+                <p className="font-cinzel text-center text-[20px] leading-tight font-bold text-white sm:text-left sm:text-[24px] lg:text-[30px]">
                   AWS Student Community Day
                   <br />
                   Mega Manila 2025
@@ -56,8 +56,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-row justify-center gap-6 sm:gap-8 lg:flex-1 lg:justify-end lg:gap-16">
-            <div className="flex max-w-[140px] flex-1 flex-col space-y-3 sm:max-w-none lg:space-y-4">
+          <div className="flex flex-row justify-center gap-6 sm:gap-8 lg:flex-1 lg:justify-end lg:gap-16 lg:pr-8">
+            <div className="flex max-w-[140px] flex-1 flex-col space-y-3 sm:max-w-none lg:max-w-[160px] lg:space-y-4">
               <p className="font-montserrat text-left text-[16px] font-bold text-white sm:text-[17px] lg:text-[18px]">
                 About Us
               </p>
@@ -105,7 +105,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            <div className="flex max-w-[140px] flex-1 flex-col space-y-3 sm:max-w-none lg:space-y-4">
+            <div className="flex max-w-[140px] flex-1 flex-col space-y-3 sm:max-w-none lg:max-w-[160px] lg:space-y-4">
               <p className="font-montserrat text-left text-[16px] font-semibold text-white sm:text-[17px] lg:text-[18px]">
                 General
               </p>
