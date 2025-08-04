@@ -113,7 +113,7 @@ const Navbar: React.FC = () => {
           <RegisterNowButton href="#register" />
         </div>
         {menuOpen && (
-          <div className="animate-fade-in fixed inset-0 top-25 z-50 h-[60vh] w-full overflow-y-auto bg-[var(--background)] sm:hidden">
+          <div className="animate-fade-in fixed inset-x-0 top-[88px] z-40 h-[70vh] w-full overflow-y-auto rounded-b-xl border-b bg-[var(--background)] sm:hidden">
             <ul className="flex flex-col items-start gap-2 p-4">
               {NAV_LINKS.map((link) => {
                 const id = link.href.replace("#", "");
