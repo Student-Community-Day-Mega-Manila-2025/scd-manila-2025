@@ -72,13 +72,15 @@ const programData = [
 
 const ProgramFlow = () => {
   const [activeTrack, setActiveTrack] = useState(programData[0]?.id || "");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const trackRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const containerRef = useRef<HTMLDivElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
 
-  // Handle manual track selection
-  const handleTrackClick = (trackId: string) => {
+  // Handle dropdown selection
+  const handleDropdownChange = (trackId: string) => {
     setActiveTrack(trackId);
+    setIsDropdownOpen(false);
     // Scroll to the corresponding track
     const targetElement = trackRefs.current[trackId];
     if (targetElement && containerRef.current) {
@@ -142,6 +144,13 @@ const ProgramFlow = () => {
     };
   }, []);
 
+  const getActiveTrackName = () => {
+    const activeTrackData = programData.find(
+      (track) => track.id === activeTrack
+    );
+    return activeTrackData?.trackName || programData[0]?.trackName || "";
+  };
+
   return (
     <section
       id="program-flow"
@@ -152,12 +161,72 @@ const ProgramFlow = () => {
           <h3 className="venue-subtitle">Mark Your Moments</h3>
           <h2 className="venue-title">Program Flow</h2>
         </div>
+
+        {/* Mobile Dropdown - Only visible on small screens */}
+        <div className="mb-6 block md:hidden">
+          <Sticky
+            top={110}
+            bottomBoundary="#program-main-content"
+            innerZ={20}
+            activeClass="is-sticky"
+            releasedClass="is-released"
+            enableTransforms={true}
+          >
+            <div className="relative">
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex w-full items-center justify-between rounded-3xl border border-white/20 bg-gradient-to-r from-[#01D5A5] via-[#4395AD] to-[#C7DFE6] px-6 py-4 text-white shadow-lg"
+              >
+                <span className="text-lg font-semibold">
+                  {getActiveTrackName()}
+                </span>
+                <svg
+                  className={`h-5 w-5 transition-transform duration-200 ${
+                    isDropdownOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              {isDropdownOpen && (
+                <div className="absolute top-full right-0 left-0 z-30 mt-2 rounded-3xl border border-white/20 bg-[var(--background)] shadow-lg">
+                  {programData.map((track) => (
+                    <button
+                      key={track.id}
+                      onClick={() => handleDropdownChange(track.id)}
+                      className={`w-full px-6 py-4 text-left text-white transition-colors hover:bg-white/10 ${
+                        activeTrack === track.id ? "bg-white/20" : ""
+                      }`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="font-semibold">{track.trackName}</span>
+                        <span className="text-sm opacity-70">
+                          {track.activities.length}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </Sticky>
+        </div>
+
         <div
           ref={containerRef}
           className="relative flex flex-col gap-8 md:flex-row"
         >
-          {/* --- Left Sticky Sidebar --- */}
-          <div className="w-full md:w-80 lg:w-96">
+          {/* --- Left Sticky Sidebar - Hidden on mobile --- */}
+          <div className="hidden w-full md:block md:w-80 lg:w-96">
             <Sticky
               top={110} // Distance from top when sticky (adjust based on your header height)
               bottomBoundary="#program-main-content"
@@ -171,7 +240,7 @@ const ProgramFlow = () => {
                   {programData.map((track) => (
                     <div
                       key={track.id}
-                      onClick={() => handleTrackClick(track.id)}
+                      onClick={() => handleDropdownChange(track.id)}
                       className={`flex h-auto w-full cursor-pointer items-center justify-between rounded-3xl border border-white/20 bg-transparent px-[50px] py-[20px] transition-all duration-300 hover:border-white/40 ${
                         activeTrack === track.id
                           ? "bg-gradient-to-r from-[#01D5A5] via-[#4395AD] to-[#C7DFE6] shadow-lg"
