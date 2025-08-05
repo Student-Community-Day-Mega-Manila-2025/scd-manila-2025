@@ -4,10 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Sticky from "react-stickynode";
 import programData from "@/data/program-flow.json";
+import CustomDropdown from "@/components/common/CustomDropdown";
 
 const ProgramFlow = () => {
   const [activeTrack, setActiveTrack] = useState(programData[0]?.id);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const trackRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const containerRef = useRef<HTMLDivElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
@@ -15,7 +15,6 @@ const ProgramFlow = () => {
   // Handle dropdown selection
   const handleDropdownChange = (trackId: string) => {
     setActiveTrack(trackId);
-    setIsDropdownOpen(false);
     // Scroll to the corresponding track
     const targetElement = trackRefs.current[trackId];
     if (targetElement && containerRef.current) {
@@ -89,7 +88,7 @@ const ProgramFlow = () => {
   return (
     <section
       id="program-flow"
-      className="relative overflow-hidden bg-[var(--background)] px-4 py-12 sm:py-16"
+      className="relative overflow-hidden bg-[var(--background)] py-12 sm:py-16 lg:px-4"
     >
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 text-left sm:mb-8">
@@ -100,59 +99,23 @@ const ProgramFlow = () => {
         {/* Mobile Dropdown - Only visible on small screens */}
         <div className="mb-6 block md:hidden">
           <Sticky
-            top={110}
+            top={100}
             bottomBoundary="#program-main-content"
             innerZ={20}
             activeClass="is-sticky"
             releasedClass="is-released"
             enableTransforms={true}
           >
-            <div className="relative">
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex w-full items-center justify-between rounded-3xl border border-white/20 bg-gradient-to-r from-[#01D5A5] via-[#4395AD] to-[#C7DFE6] px-6 py-4 text-white shadow-lg"
-              >
-                <span className="text-lg font-semibold">
-                  {getActiveTrackName()}
-                </span>
-                <svg
-                  className={`h-5 w-5 transition-transform duration-200 ${
-                    isDropdownOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-
-              {isDropdownOpen && (
-                <div className="absolute top-full right-0 left-0 z-30 mt-2 rounded-3xl border border-white/20 bg-[var(--background)] shadow-lg">
-                  {programData.map((track) => (
-                    <button
-                      key={track.id}
-                      onClick={() => handleDropdownChange(track.id)}
-                      className={`w-full px-6 py-4 text-left text-white transition-colors hover:bg-white/10 ${
-                        activeTrack === track.id ? "bg-white/20" : ""
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="font-semibold">{track.trackName}</span>
-                        <span className="text-sm opacity-70">
-                          {track.activities.length}
-                        </span>
-                      </div>
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            <CustomDropdown
+              options={programData.map((track) => ({
+                value: track.id,
+                label: track.trackName,
+                count: track.activities.length,
+              }))}
+              value={activeTrack}
+              onChange={handleDropdownChange}
+              placeholder="Select a track"
+            />
           </Sticky>
         </div>
 
@@ -176,16 +139,16 @@ const ProgramFlow = () => {
                     <div
                       key={track.id}
                       onClick={() => handleDropdownChange(track.id)}
-                      className={`flex h-auto w-full cursor-pointer items-center justify-between rounded-3xl border border-white/20 bg-transparent px-[50px] py-[20px] transition-all duration-300 hover:border-white/40 ${
+                      className={`flex h-auto max-h-16 w-full cursor-pointer items-center justify-between overflow-hidden rounded-3xl border border-white/20 bg-transparent px-[50px] py-[20px] transition-all duration-300 hover:border-white/40 ${
                         activeTrack === track.id
                           ? "bg-gradient-to-r from-[#01D5A5] via-[#4395AD] to-[#C7DFE6] shadow-lg"
                           : "bg-transparent hover:bg-gradient-to-r hover:from-[rgba(1,213,165,0.50)] hover:via-[rgba(67,149,173,0.50)] hover:to-[rgba(199,223,230,0.50)] hover:shadow-lg"
                       }`}
                     >
-                      <h4 className="text-lg font-semibold text-white">
+                      <h4 className="text-md flex-1 truncate font-medium text-white">
                         {track.trackName}
                       </h4>
-                      <div className="text-lg font-bold text-white">
+                      <div className="text-md ml-2 flex-shrink-0 font-medium text-white">
                         {track.activities.length}
                       </div>
                     </div>
@@ -207,13 +170,13 @@ const ProgramFlow = () => {
                 ref={(el) => {
                   trackRefs.current[track.id] = el;
                 }}
-                className="mb-10 w-full scroll-mt-24 rounded-3xl border-1 border-white px-9 py-3"
+                className="mb-6 w-full scroll-mt-24 rounded-3xl border-1 border-white px-4 py-3 lg:mb-10 lg:px-9"
               >
-                <div className="flex items-center justify-between border-b border-white px-4 py-4">
-                  <h4 className="text-xl font-bold text-white">
+                <div className="flex items-center justify-between gap-4 border-b border-white px-2 py-4 lg:gap-0 lg:px-4">
+                  <h4 className="text-sm font-bold text-white lg:text-xl">
                     {track.trackName}
                   </h4>
-                  <div className="cursor-pointer border-b-2 border-white text-lg font-medium text-white transition-opacity hover:opacity-80">
+                  <div className="min-w-fit cursor-pointer border-b-2 border-white text-sm font-medium text-white transition-opacity hover:opacity-80 lg:text-lg">
                     Open All
                   </div>
                 </div>
@@ -221,16 +184,16 @@ const ProgramFlow = () => {
                   {track.activities.map((activity, index) => (
                     <div
                       key={`${activity.title}-${index}`}
-                      className={`text-md flex items-center justify-between gap-4 py-6 font-bold text-white ${
+                      className={`lg:text-md flex items-center justify-between gap-4 py-3 text-xs font-normal text-white lg:py-6 lg:font-bold ${
                         index < track.activities.length - 1
                           ? "border-b border-white"
                           : ""
                       }`}
                     >
-                      <div className="min-w-[170px] border-r border-white pr-4">
+                      <div className="flex max-w-[170px] min-w-[120px] items-center border-r border-white lg:pr-4">
                         {activity.time}
                       </div>
-                      <div className="flex-1 px-4">{activity.title}</div>
+                      <div className="flex-1 lg:px-4">{activity.title}</div>
                       <div className="cursor-pointer transition-opacity hover:opacity-80">
                         <Image
                           src="/plus.svg"
