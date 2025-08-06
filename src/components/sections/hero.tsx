@@ -6,14 +6,14 @@ const GradientCircle = ({ className }: { className: string }) => {
 
 const Title = () => {
   return (
-    <div className="hero-title z-50 flex h-[calc(100vh-97px)] w-full flex-col items-center justify-center text-center transition-all lg:h-1/2 lg:items-start lg:text-left xl:h-3/5">
-      <p className="font-subheading text-secondary-500 text-xl font-bold lg:text-2xl">
+    <div className="hero-title z-50 flex h-[calc(100vh-97px)] w-full flex-col items-center justify-center transition-all">
+      <p className="hero-title-subheading font-subheading text-secondary-600 font-bold">
         AWS Cloud Club
       </p>
-      <div className="font-heading bg-[linear-gradient(125deg,_#01D5A5_2.58%,_#99EEDB_59.86%,_#529DB3_93.48%)] bg-clip-text text-2xl leading-none font-bold [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-shadow-[4px_4px_0px_rgba(0,0,0,0.10)] lg:max-w-[650px] lg:text-3xl xl:max-w-[800px] xl:text-4xl">
+      <div className="hero-title-heading font-heading bg-[linear-gradient(125deg,_#01D5A5_2.58%,_#99EEDB_59.86%,_#529DB3_93.48%)] bg-clip-text leading-none font-bold [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-shadow-[4px_4px_0px_rgba(0,0,0,0.10)]">
         <p>Student Community Day</p>
       </div>
-      <p className="font-subheading text-secondary-500 text-xl font-bold xl:text-2xl">
+      <p className="hero-title-subheading font-subheading text-secondary-600 font-bold">
         Mega Manila 2025
       </p>
     </div>
@@ -23,7 +23,7 @@ const Title = () => {
 const EllipseBorder = ({ className }: { className: string }) => {
   return (
     <div
-      className={`border-full absolute -z-10 rounded-full border border-[#4395AD] ${className}`}
+      className={`absolute -z-10 rounded-full border border-[#4395AD] ${className}`}
     />
   );
 };
@@ -118,12 +118,13 @@ const GlowingDot = ({ className }: { className: string }) => {
 const Hero = () => {
   return (
     <section id="hero" className="h-screen">
-      <GradientCircle className="absolute top-24 left-20 h-[600px] w-[600px] bg-[#008B9C] opacity-50 blur-[280px]" />
-      <GradientCircle className="absolute top-12 right-24 -z-20 h-[300px] w-[180px] bg-[#79CEE7] opacity-70 blur-[120px]" />
+      <Clouds className="hero-clouds aspect-square opacity-40" />
+      <GradientCircle className="absolute hidden bg-[#008B9C] opacity-50 blur-[280px] lg:top-12 lg:left-12 lg:block lg:h-[450px] lg:w-[450px] xl:top-16 xl:left-20 xl:h-[600px] xl:w-[600px]" />
       <EllipseBorder className="hero-ellipse" />
-      <Clouds className="-top-[95%] -left-[40%] aspect-square w-screen opacity-35" />
-      <RainbowStreak className="absolute top-8 right-24 -z-10 h-1/2 w-[20%] blur-[20px]" />
       <Title />
+
+      <GradientCircle className="absolute top-12 right-24 -z-20 h-[300px] w-[180px] bg-[#79CEE7] opacity-70 blur-[120px]" />
+      <RainbowStreak className="absolute top-8 right-24 -z-10 h-1/2 w-[20%] blur-[20px]" />
 
       <FourPointedStar className="twinkle absolute top-80 left-1/2 -z-10 h-8 w-8" />
       <FourPointedStar className="twinkle absolute top-96 right-1/5 -z-10 h-4 w-4" />
