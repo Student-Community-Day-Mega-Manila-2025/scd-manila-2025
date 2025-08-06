@@ -164,36 +164,43 @@ h3 {
 .registration-subtitle {
   color: #01d5a4;
   font-family: "Cinzel", serif;
-  font-size: 31.99px;
   font-weight: 700;
-  letter-spacing: 0.64px;
 }
 
 .ticket-title {
   color: #ebd228;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   font-family: "Cinzel", serif;
-  font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 45px; /* 93.75% */
+  /* 93.75% */
   letter-spacing: 2.4px;
+}
+
+.ticket_mobile {
+  color: #EBD228;
+  text-align: center;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Cinzel Decorative";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  /* 108.696% */
+  letter-spacing: 0.46px;
 }
 
 .ticket-title-description {
   font-family: "Cinzel", serif;
-  font-size: 31.99px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.64px;
-  background: linear-gradient(
-    137deg,
-    #ccf7ed 7.8%,
-    #01d5a4 59.9%,
-    #99eedb 98.82%,
-    #34ddb6 126.64%
-  );
+  background: linear-gradient(137deg,
+      #ccf7ed 7.8%,
+      #01d5a4 59.9%,
+      #99eedb 98.82%,
+      #34ddb6 126.64%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -222,16 +229,13 @@ h3 {
 .event-starts-in {
   text-align: center;
   font-family: "Cinzel", serif;
-  font-size: 25px;
   font-weight: 700;
   letter-spacing: 0.452px;
-  background: linear-gradient(
-    137deg,
-    #00ffc6 7.8%,
-    #078265 59.9%,
-    #b3f2e4 98.82%,
-    #34ddb6 126.64%
-  );
+  background: linear-gradient(137deg,
+      #00ffc6 7.8%,
+      #078265 59.9%,
+      #b3f2e4 98.82%,
+      #34ddb6 126.64%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -242,7 +246,6 @@ h3 {
   color: #2f2d08;
   text-align: center;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -271,12 +274,10 @@ h3 {
 
 .gradient-border {
   position: relative;
-  background: linear-gradient(
-    119deg,
-    #01d5a5 2.58%,
-    #99eedb 59.86%,
-    #529db3 93.48%
-  );
+  background: linear-gradient(119deg,
+      #01d5a5 2.58%,
+      #99eedb 59.86%,
+      #529db3 93.48%);
   padding: 2px;
   border-radius: 50px;
 }
@@ -293,11 +294,9 @@ h3 {
 
 .gradient-border:hover span {
   border-color: white;
-  background: linear-gradient(
-    137deg,
-    #00ffc6 7.8%,
-    #078265 59.9%,
-    #b3f2e4 98.82%,
-    #34ddb6 126.64%
-  );
+  background: linear-gradient(137deg,
+      #00ffc6 7.8%,
+      #078265 59.9%,
+      #b3f2e4 98.82%,
+      #34ddb6 126.64%);
 }

@@ -139,11 +139,10 @@ const ProgramFlow = () => {
                     <div
                       key={track.id}
                       onClick={() => handleDropdownChange(track.id)}
-                      className={`flex h-auto max-h-16 w-full cursor-pointer items-center justify-between overflow-hidden rounded-3xl border border-white/20 bg-transparent px-[50px] py-[20px] transition-all duration-300 hover:border-white/40 ${
-                        activeTrack === track.id
+                      className={`flex h-auto max-h-16 w-full cursor-pointer items-center justify-between overflow-hidden rounded-3xl border border-white/20 bg-transparent px-[50px] py-[20px] transition-all duration-300 hover:border-white/40 ${activeTrack === track.id
                           ? "bg-gradient-to-r from-[#01D5A5] via-[#4395AD] to-[#C7DFE6] shadow-lg"
                           : "bg-transparent hover:bg-gradient-to-r hover:from-[rgba(1,213,165,0.50)] hover:via-[rgba(67,149,173,0.50)] hover:to-[rgba(199,223,230,0.50)] hover:shadow-lg"
-                      }`}
+                        }`}
                     >
                       <h4 className="text-md flex-1 truncate font-medium text-white">
                         {track.trackName}
@@ -184,11 +183,10 @@ const ProgramFlow = () => {
                   {track.activities.map((activity, index) => (
                     <div
                       key={`${activity.title}-${index}`}
-                      className={`lg:text-md flex items-center justify-between gap-4 py-3 text-xs font-normal text-white lg:py-6 lg:font-bold ${
-                        index < track.activities.length - 1
+                      className={`lg:text-md flex items-center justify-between gap-4 py-3 text-xs font-normal text-white lg:py-6 lg:font-bold ${index < track.activities.length - 1
                           ? "border-b border-white"
                           : ""
-                      }`}
+                        }`}
                     >
                       <div className="flex max-w-[170px] min-w-[120px] items-center border-r border-white lg:pr-4">
                         {activity.time}
