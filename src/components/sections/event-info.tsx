@@ -1,10 +1,11 @@
+import SectionPage from "@/components/layout/section-page";
 import React from "react";
 
 const EventInfo = () => {
   return (
-    <section id="event-info">
+    <SectionPage id="event-info">
       <p>Event Info</p>
-    </section>
+    </SectionPage>
   );
 };
 
