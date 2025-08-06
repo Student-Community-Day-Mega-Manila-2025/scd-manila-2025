@@ -1,10 +1,11 @@
+import SectionPage from "@/components/layout/section-page";
 import React from "react";
 
 const Registration = () => {
   return (
-    <section id="registration">
+    <SectionPage id="registration">
       <p>Registration</p>
-    </section>
+    </SectionPage>
   );
 };
 

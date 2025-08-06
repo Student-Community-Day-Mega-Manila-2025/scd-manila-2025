@@ -5,6 +5,7 @@ import Image from "next/image";
 import Sticky from "react-stickynode";
 import programData from "@/data/program-flow.json";
 import CustomDropdown from "@/components/common/CustomDropdown";
+import SectionPage from "@/components/layout/section-page";
 
 const ProgramFlow = () => {
   const [activeTrack, setActiveTrack] = useState(programData[0]?.id);
@@ -86,11 +87,11 @@ const ProgramFlow = () => {
   };
 
   return (
-    <section
+    <SectionPage
       id="program-flow"
-      className="relative overflow-hidden bg-[var(--background)] py-12 sm:py-16 lg:px-4"
+      className="relative overflow-hidden bg-[var(--background)]"
     >
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-6 text-left sm:mb-8">
           <h3 className="venue-subtitle">Mark Your Moments</h3>
           <h2 className="venue-title">Program Flow</h2>
@@ -210,7 +211,7 @@ const ProgramFlow = () => {
           </main>
         </div>
       </div>
-    </section>
+    </SectionPage>
   );
 };
 

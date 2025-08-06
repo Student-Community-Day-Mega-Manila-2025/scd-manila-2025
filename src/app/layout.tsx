@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel_Decorative, Inter } from "next/font/google";
+import { Cinzel, Cinzel_Decorative, Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Navbar from "@/components/layout/navbar";
@@ -11,7 +11,13 @@ const inter = Inter({
 });
 
 const cinzelDecorative = Cinzel_Decorative({
-  variable: "--font-heading",
+  variable: "--font-cinzel-decorative",
+  weight: ["400", "700", "900"],
+  subsets: ["latin"],
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   weight: ["400", "700", "900"],
   subsets: ["latin"],
 });
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${cinzelDecorative.variable} antialiased`}
+        className={`${inter.variable} ${cinzelDecorative.variable} ${cinzel.variable} antialiased`}
       >
         <Navbar />
         {children}

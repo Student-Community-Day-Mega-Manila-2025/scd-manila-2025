@@ -1,8 +1,9 @@
+import SectionPage from "@/components/layout/section-page";
 import React from "react";
 
 const EventInfo = () => {
   return (
-    <section
+    <SectionPage
       id="event-info"
       className="relative grid h-[calc(100vh-97px)] w-full grid-cols-2 border border-blue-500"
     >
@@ -36,7 +37,7 @@ const EventInfo = () => {
             />
           </div> */}
       </div>
-    </section>
+    </SectionPage>
   );
 };
 
