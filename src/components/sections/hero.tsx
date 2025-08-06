@@ -1,3 +1,4 @@
+import SectionPage from "@/components/layout/section-page";
 import React from "react";
 
 const GradientCircle = ({ className }: { className: string }) => {
@@ -117,7 +118,7 @@ const GlowingDot = ({ className }: { className: string }) => {
 
 const Hero = () => {
   return (
-    <section id="hero" className="h-screen">
+    <SectionPage id="hero" className="h-screen py-0!">
       <Clouds className="hero-clouds aspect-square opacity-40" />
       <GradientCircle className="absolute hidden bg-[#008B9C] opacity-50 blur-[280px] lg:top-12 lg:left-12 lg:block lg:h-[450px] lg:w-[450px] xl:top-16 xl:left-20 xl:h-[600px] xl:w-[600px]" />
       <EllipseBorder className="hero-ellipse" />
@@ -135,7 +136,7 @@ const Hero = () => {
 
       <GlowingDot className="absolute top-1/4 right-1/4 -z-10" />
       <GlowingDot className="absolute top-1/2 right-24 -z-10" />
-    </section>
+    </SectionPage>
   );
 };
 
