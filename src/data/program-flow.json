@@ -1,0 +1,73 @@
+[
+  {
+    "id": "track-1",
+    "trackName": "Morning Plenary",
+    "activities": [
+      {
+        "time": "8:00 AM - 9:30 AM",
+        "title": "Registration and Check-in of Attendees"
+      },
+      {
+        "time": "9:30 AM - 10:00 AM",
+        "title": "Opening Remarks & Welcome Address"
+      },
+      {
+        "time": "10:00 AM - 10:30 AM",
+        "title": "Keynote: The Dawn of a New Era"
+      },
+      { "time": "10:30 AM - 11:00 AM", "title": "Networking Break" }
+    ]
+  },
+  {
+    "id": "track-2",
+    "trackName": "Track 1: Student Empowerment and Industry Voices",
+    "activities": [
+      {
+        "time": "11:30 AM - 12:30 PM",
+        "title": "Deep Dive into Quantum Computing"
+      },
+      {
+        "time": "12:30 PM - 1:30 PM",
+        "title": "Architecting Scalable Microservices"
+      },
+      { "time": "1:30 PM - 2:30 PM", "title": "Lunch Break" },
+      {
+        "time": "2:30 PM - 3:30 PM",
+        "title": "Advanced State Management Patterns"
+      },
+      { "time": "3:30 PM - 4:30 PM", "title": "Real-time Data with WebSockets" }
+    ]
+  },
+  {
+    "id": "track-3",
+    "trackName": "Business & Strategy Track",
+    "activities": [
+      {
+        "time": "11:30 AM - 12:30 PM",
+        "title": "Market Disruption and Innovation"
+      },
+      {
+        "time": "12:30 PM - 1:30 PM",
+        "title": "Leading High-Performance Teams"
+      },
+      { "time": "1:30 PM - 2:30 PM", "title": "Lunch Break" },
+      { "time": "2:30 PM - 3:30 PM", "title": "Data-Driven Decision Making" },
+      {
+        "time": "3:30 PM - 4:30 PM",
+        "title": "Future-Proofing Your Business Model"
+      }
+    ]
+  },
+  {
+    "id": "track-4",
+    "trackName": "Closing Remarks",
+    "activities": [
+      {
+        "time": "4:30 PM - 5:30 PM",
+        "title": "Panel Discussion: What's Next?"
+      },
+      { "time": "5:30 PM - 6:00 PM", "title": "Awards and Closing Ceremony" },
+      { "time": "6:00 PM - 7:00 PM", "title": "Cocktail & Networking Hour" }
+    ]
+  }
+]
