@@ -57,7 +57,7 @@ const EventInfo = () => {
       </div>
       <div className="absolute right-0 bottom-0 hidden h-full lg:block">
         <img
-          src="/clouds.png"
+          src="/2-Clouds.png"
           alt="Event Cloud"
           className="h-full max-h-[600px] w-full object-contain opacity-10"
         />
