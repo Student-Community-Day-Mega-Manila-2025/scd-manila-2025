@@ -7,7 +7,7 @@ const GradientCircle = ({ className }: { className: string }) => {
 
 const Title = () => {
   return (
-    <div className="hero-title z-50 flex h-[calc(100vh-97px)] w-full flex-col items-center justify-center transition-all">
+    <div className="hero-title z-10 flex h-full w-full flex-col items-center justify-center">
       <p className="hero-title-subheading font-subheading text-secondary-600 font-bold">
         AWS Cloud Club
       </p>
@@ -64,10 +64,10 @@ const RainbowStreak = ({ className }: { className: string }) => {
 const Clouds = ({ className }: { className: string }) => {
   return (
     <div
-      className={`absolute -z-10 rounded-full bg-[url('/clouds.png')] bg-cover bg-center ${className}`}
+      className={`absolute -z-10 rounded-full bg-cover bg-center ${className}`}
     >
       <img
-        src="/clouds.png"
+        src="/2-Clouds.png"
         alt="Clouds"
         className="h-full w-full object-cover"
       />
@@ -118,14 +118,20 @@ const GlowingDot = ({ className }: { className: string }) => {
 
 const Hero = () => {
   return (
-    <SectionPage id="hero" className="h-screen py-0!">
-      <Clouds className="hero-clouds aspect-square opacity-40" />
-      <GradientCircle className="absolute hidden bg-[#008B9C] opacity-50 blur-[280px] lg:top-12 lg:left-12 lg:block lg:h-[450px] lg:w-[450px] xl:top-16 xl:left-20 xl:h-[600px] xl:w-[600px]" />
-      <EllipseBorder className="hero-ellipse" />
-      <Title />
-
-      <GradientCircle className="absolute top-12 right-24 -z-20 h-[300px] w-[180px] bg-[#79CEE7] opacity-70 blur-[120px]" />
-      <RainbowStreak className="absolute top-8 right-24 -z-10 h-1/2 w-[20%] blur-[20px]" />
+    <SectionPage
+      id="hero"
+      className="relative flex h-[calc(100vh-97px)] max-h-[1200px] w-full justify-center overflow-hidden px-0! py-0!"
+    >
+      <div className="flex h-full w-full justify-center p-0 xl:max-w-7xl">
+        <div className="relative h-full w-full">
+          <Clouds className="hero-clouds aspect-square opacity-40" />
+          <EllipseBorder className="hero-ellipse" />
+          <Title />
+        </div>
+        <GradientCircle className="absolute hidden bg-[#008B9C] opacity-50 blur-[200px] lg:top-16 lg:left-40 lg:block lg:h-[400px] lg:w-[400px] xl:h-[500px] xl:w-[500px]" />
+        <GradientCircle className="absolute -top-12 right-24 -z-20 h-[200px] w-[200px] bg-[#79CEE7] opacity-70 blur-[150px]" />
+        <RainbowStreak className="absolute top-0 right-8 -z-10 h-1/2 max-h-[500px] w-[20%] blur-[20px]" />
+      </div>
 
       <FourPointedStar className="twinkle absolute top-80 left-1/2 -z-10 h-8 w-8" />
       <FourPointedStar className="twinkle absolute top-96 right-1/5 -z-10 h-4 w-4" />
