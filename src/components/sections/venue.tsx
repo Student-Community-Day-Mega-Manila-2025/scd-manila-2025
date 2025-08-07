@@ -1,5 +1,6 @@
 "use client";
 
+import SectionPage from "@/components/layout/section-page";
 import React, { useState, useMemo } from "react";
 import { FaRegClock, FaDirections } from "react-icons/fa";
 import { IoLocationOutline, IoLink } from "react-icons/io5";
@@ -85,9 +86,9 @@ const Venue = () => {
   }, [selectedDirection]);
 
   return (
-    <section
+    <SectionPage
       id="venue"
-      className="relative overflow-hidden bg-[var(--background)] px-4 py-12 sm:py-16"
+      className="relative overflow-hidden bg-[var(--background)]"
     >
       <div className="pointer-events-none absolute top-1/4 right-0 h-[300px] w-[120px] -rotate-[42.5deg] rounded-[50%_30%_70%_40%] bg-[#02C397] opacity-20 blur-[80px] sm:h-[499px] sm:w-[197px] sm:blur-[100px]" />
       <div className="pointer-events-none absolute bottom-0 left-1/4 h-[250px] w-[200px] rounded-[40%_60%_30%_70%] bg-[#02C397] opacity-15 blur-[100px] sm:h-[400px] sm:w-[300px] sm:blur-[120px]" />
@@ -210,7 +211,7 @@ const Venue = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionPage>
   );
 };
 
