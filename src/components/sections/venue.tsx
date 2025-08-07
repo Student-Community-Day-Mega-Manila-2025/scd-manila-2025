@@ -86,16 +86,13 @@ const Venue = () => {
   }, [selectedDirection]);
 
   return (
-    <SectionPage
-      id="venue"
-      className="relative overflow-hidden bg-[var(--background)]"
-    >
-      <div className="pointer-events-none absolute top-1/4 right-0 h-[300px] w-[120px] -rotate-[42.5deg] rounded-[50%_30%_70%_40%] bg-[#02C397] opacity-20 blur-[80px] sm:h-[499px] sm:w-[197px] sm:blur-[100px]" />
-      <div className="pointer-events-none absolute bottom-0 left-1/4 h-[250px] w-[200px] rounded-[40%_60%_30%_70%] bg-[#02C397] opacity-15 blur-[100px] sm:h-[400px] sm:w-[300px] sm:blur-[120px]" />
-      <div className="pointer-events-none absolute top-1/2 left-0 h-[300px] w-[150px] -rotate-[53.6deg] rounded-[60%_40%_30%_70%] bg-[rgba(0,255,197,0.5)] blur-[60px] sm:h-[457px] sm:w-[224px] sm:blur-[80px]" />
-      <div className="pointer-events-none absolute top-0 right-1/3 h-[400px] w-[200px] rounded-[30%_70%_40%_60%] bg-[var(--background)] opacity-80 blur-[120px] sm:h-[688px] sm:w-[300px] sm:blur-[150px]" />
+    <SectionPage id="venue" className="relative bg-[var(--background)]">
+      <div className="pointer-events-none absolute top-1/4 right-0 z-10 h-[300px] w-[120px] -rotate-[42.5deg] rounded-[50%_30%_70%_40%] bg-[#02C397] opacity-20 blur-[80px] sm:h-[499px] sm:w-[197px] sm:blur-[100px]" />
+      <div className="pointer-events-none absolute bottom-0 left-1/4 z-10 h-[250px] w-[200px] rounded-[40%_60%_30%_70%] bg-[#02C397] opacity-15 blur-[100px] sm:h-[400px] sm:w-[300px] sm:blur-[120px]" />
+      <div className="pointer-events-none absolute top-1/2 left-0 z-10 h-[300px] w-[150px] -rotate-[53.6deg] rounded-[60%_40%_30%_70%] bg-[rgba(0,255,197,0.5)] blur-[60px] sm:h-[457px] sm:w-[224px] sm:blur-[80px]" />
+      <div className="pointer-events-none absolute top-0 right-1/3 z-10 h-[400px] w-[200px] rounded-[30%_70%_40%_60%] bg-[var(--background)] opacity-80 blur-[120px] sm:h-[688px] sm:w-[300px] sm:blur-[150px]" />
 
-      <div className="relative mx-auto max-w-7xl">
+      <div className="relative z-50 mx-auto max-w-7xl">
         <div className="mb-6 text-left sm:mb-8">
           <h3 className="venue-subtitle">Know Where To Go</h3>
           <h2 className="venue-title">Venue Information</h2>

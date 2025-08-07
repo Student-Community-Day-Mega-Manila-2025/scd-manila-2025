@@ -10,7 +10,7 @@ import Venue from "@/components/sections/venue";
 
 export default function Home() {
   return (
-    <main className="space-y-12">
+    <main className="space-y-12 overflow-hidden">
       <Hero />
       <Countdown />
       {/* <EventInfo /> */}
