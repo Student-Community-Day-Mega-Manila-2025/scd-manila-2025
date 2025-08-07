@@ -1,4 +1,4 @@
-import EventInfo from "@/components/sections/event-info";
+import Countdown from "@/components/common/countdown";
 import FaqSection from "@/components/sections/faqs";
 import Hero from "@/components/sections/hero";
 import MeetTheTeamSection from "@/components/sections/meet-the-team";
@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <main className="space-y-12">
       <Hero />
-      <EventInfo />
+      <Countdown />
+      {/* <EventInfo /> */}
       <Venue />
       <ProgramFlow />
       <Speakers />
