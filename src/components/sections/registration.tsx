@@ -12,7 +12,7 @@ const Registration = () => {
   return (
     <SectionPage
       id="registration"
-      className="relative bg-[var(--background)] px-4 py-12 sm:py-16"
+      className="relative bg-[var(--background)] px-4 pt-12 sm:py-16"
     >
       <div className="pointer-events-none absolute top-5 -right-30 z-40 h-[350px] w-[300px] rounded-[40%_60%_30%_70%] bg-[#00FFC5B2] opacity-[40%] blur-[100px] lg:-top-35 lg:-right-24" />
       <div className="absolute -top-20 -right-20 z-10 h-[270px] w-[230px] opacity-60 lg:-top-40 lg:-right-40 lg:h-[550px] lg:w-[450px]">
@@ -20,7 +20,7 @@ const Registration = () => {
       </div>
 
       <div className="pointer-events-none absolute -bottom-28 -left-24 z-40 hidden h-[400px] w-[300px] rounded-[40%_60%_30%_70%] bg-[#00FFC5B2] opacity-[40%] blur-[100px] lg:block" />
-      <div className="absolute -bottom-20 -left-10 z-10 h-[170px] w-[130px] opacity-60 lg:-bottom-8 lg:-left-35 lg:h-[450px] lg:w-[350px]">
+      <div className="absolute -bottom-25 -left-10 z-10 h-[170px] w-[130px] opacity-60 lg:-bottom-48 lg:-left-35 lg:h-[450px] lg:w-[350px]">
         <Image
           src="/ringed_planet.png"
           alt="Planet"
@@ -29,7 +29,7 @@ const Registration = () => {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="mb-6 text-left sm:mb-8">
           <h3 className="registration-subtitle w-[260px] !text-[16px] lg:w-[550px] lg:!text-[32px]">
             Join the Future of Innovation in Cloud Tech!
