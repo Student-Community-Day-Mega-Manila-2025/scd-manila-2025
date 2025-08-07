@@ -89,9 +89,9 @@ const ProgramFlow = () => {
   return (
     <SectionPage
       id="program-flow"
-      className="relative overflow-hidden bg-[var(--background)]"
+      className="relative overflow-hidden bg-[var(--background)] py-12 sm:py-16 lg:px-4"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 text-left sm:mb-8">
           <h3 className="venue-subtitle">Mark Your Moments</h3>
           <h2 className="venue-title">Program Flow</h2>
