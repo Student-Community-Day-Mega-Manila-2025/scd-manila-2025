@@ -12,7 +12,7 @@ const SectionPage: React.FC<SectionPageProps> = ({
 }) => {
   return (
     <section
-      className={`w-full overflow-x-hidden px-4 py-6 sm:px-8 md:px-16 xl:px-24 ${className}`}
+      className={`w-full px-4 py-6 sm:px-8 md:px-16 xl:px-24 ${className}`}
       {...props}
     >
       {children}

@@ -64,10 +64,10 @@ const RainbowStreak = ({ className }: { className: string }) => {
 const Clouds = ({ className }: { className: string }) => {
   return (
     <div
-      className={`absolute -z-10 rounded-full bg-[url('/clouds.png')] bg-cover bg-center ${className}`}
+      className={`absolute -z-10 rounded-full bg-cover bg-center ${className}`}
     >
       <img
-        src="/clouds.png"
+        src="/2-Clouds.png"
         alt="Clouds"
         className="h-full w-full object-cover"
       />
