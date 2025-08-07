@@ -1,4 +1,5 @@
 import Countdown from "@/components/common/countdown";
+import EventInfo from "@/components/sections/event-info";
 import FaqSection from "@/components/sections/faqs";
 import Hero from "@/components/sections/hero";
 import MeetTheTeamSection from "@/components/sections/meet-the-team";
@@ -13,7 +14,7 @@ export default function Home() {
     <main className="space-y-12 overflow-hidden">
       <Hero />
       <Countdown />
-      {/* <EventInfo /> */}
+      <EventInfo />
       <Venue />
       <ProgramFlow />
       <Speakers />
