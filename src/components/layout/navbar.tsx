@@ -136,7 +136,10 @@ const Navbar: React.FC = () => {
           })}
         </ul>
         <div className="ml-auto hidden sm:flex">
-          <RegisterNowButton href="#register" />
+          <RegisterNowButton
+            href="#register"
+            isActive={selected === "register"}
+          />
         </div>
         {menuOpen && (
           <div className="animate-fade-in fixed inset-x-0 top-[88px] z-40 h-[70vh] w-full overflow-y-auto rounded-b-xl border-b bg-[var(--background)] sm:hidden">
@@ -157,7 +160,10 @@ const Navbar: React.FC = () => {
               })}
             </ul>
             <div className="mt-[50px] flex justify-center">
-              <RegisterNowButton href="#register" />
+              <RegisterNowButton
+                href="#register"
+                isActive={selected === "register"}
+              />
             </div>
           </div>
         )}

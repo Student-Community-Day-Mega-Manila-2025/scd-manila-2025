@@ -64,7 +64,7 @@ const Footer = () => {
               <ul className="space-y-1.5 text-white lg:space-y-2">
                 <li className="text-left">
                   <a
-                    href="#"
+                    href="#event-info"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     Description
@@ -72,13 +72,13 @@ const Footer = () => {
                 </li>
                 <li className="text-left">
                   <a
-                    href="#"
+                    href="#venue"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     Venue Information
                   </a>
                 </li>
-                <li className="text-left">
+                {/* <li className="text-left">
                   <a
                     href="#"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
@@ -93,10 +93,10 @@ const Footer = () => {
                   >
                     Sponsors
                   </a>
-                </li>
+                </li> */}
                 <li className="text-left">
                   <a
-                    href="#"
+                    href="#team"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     Team
@@ -110,17 +110,17 @@ const Footer = () => {
                 General
               </p>
               <ul className="space-y-1.5 text-white lg:space-y-2">
-                <li className="text-left">
+                {/* <li className="text-left">
                   <a
                     href="#"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     FAQs
                   </a>
-                </li>
+                </li> */}
                 <li className="text-left">
                   <a
-                    href="#"
+                    href="#program-flow"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     Program Flow
@@ -128,7 +128,7 @@ const Footer = () => {
                 </li>
                 <li className="text-left">
                   <a
-                    href="#"
+                    href="#register"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     Registration
