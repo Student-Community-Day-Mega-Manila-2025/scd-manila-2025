@@ -32,6 +32,8 @@ COPY --from=builder /app/.next/standalone ./
 
 COPY --from=builder /app/.next/static ./.next/static
 
+COPY --from=builder /app/public ./public
+
 RUN mkdir -p /tmp/cache && \
     ln -s /tmp/cache ./.next/cache
 
