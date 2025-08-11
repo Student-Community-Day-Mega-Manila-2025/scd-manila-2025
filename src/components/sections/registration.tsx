@@ -259,11 +259,17 @@ const Registration = () => {
 
         {/* Registration Button */}
         <div className="mt-16 flex w-full flex-col items-center justify-center gap-6 lg:mt-10">
-          <button className="gradient-border w-[250px] lg:w-[450px]">
-            <span className="text-[14px] font-bold lg:text-[25px]">
-              Register Now
-            </span>
-          </button>
+          <a
+            href="https://tinyurl.com/AWSSCD-RegistrationForm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="gradient-border w-[250px] lg:w-[450px]">
+              <span className="text-[14px] font-bold lg:text-[25px]">
+                Register Now
+              </span>
+            </button>
+          </a>
           <div className="flex items-center justify-center">
             <h3 className="event-starts-in !text-[16px] lg:!text-[25px]">
               Event Starts in XX Days
