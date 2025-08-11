@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import SectionPage from "../layout/section-page";
 
@@ -8,6 +8,30 @@ const Registration = () => {
   const [mobileHoveredTicket, setMobileHoveredTicket] = useState<string | null>(
     null
   );
+  const [daysLeft, setDaysLeft] = useState<number>(0);
+
+  const calculateDaysLeft = (): number => {
+    const targetDate = new Date("2025-09-17T00:00:00").getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      return days;
+    }
+
+    return 0;
+  };
+
+  useEffect(() => {
+    setDaysLeft(calculateDaysLeft());
+
+    const timer = setInterval(() => {
+      setDaysLeft(calculateDaysLeft());
+    }, 3600000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <SectionPage
@@ -272,7 +296,7 @@ const Registration = () => {
           </a>
           <div className="flex items-center justify-center">
             <h3 className="event-starts-in !text-[16px] lg:!text-[25px]">
-              Event Starts in XX Days
+              Event Starts in {daysLeft} Days
             </h3>
           </div>
         </div>
