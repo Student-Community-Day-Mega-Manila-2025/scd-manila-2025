@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HamburgerIcon from "./HamburgerIcon";
 import { FaChevronRight } from "react-icons/fa";
 import RegisterNowButton from "../common/RegisterNowButton";
@@ -8,8 +8,8 @@ const NAV_LINKS = [
   { href: "#hero", label: "Home" },
   { href: "#event-info", label: "About Event" },
   { href: "#program-flow", label: "Program" },
-  { href: "#sponsors-and-partners", label: "Sponsors" },
-  { href: "#faqs", label: "FAQs" },
+  // { href: "#sponsors-and-partners", label: "Sponsors" },
+  // { href: "#faqs", label: "FAQs" },
   { href: "#team", label: "Team" },
 ];
 
@@ -39,9 +39,8 @@ const NavLink: React.FC<NavLinkProps> = ({
           (!isActive ? "hover-white-shadow" : "")
         : "block flex w-full items-center justify-between rounded px-2 py-2 text-base transition-colors duration-200 ") +
       (isActive
-        ? "font-bold text-[var(--foreground)]" +
-          (desktop ? " underline decoration-[rgba(1,213,164,0.5)]" : "")
-        : "font-normal text-white hover:text-white") +
+        ? "font-bold text-[var(--foreground)]"
+        : "font-normal text-white hover:text-[#01d5a4]") +
       " " +
       className
     }
@@ -64,6 +63,33 @@ const NavLink: React.FC<NavLinkProps> = ({
 const Navbar: React.FC = () => {
   const [selected, setSelected] = useState<string>("home");
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll<HTMLElement>("section[id]");
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const offset = 150;
+        if (
+          sectionTop <= offset &&
+          sectionTop + section.offsetHeight > offset
+        ) {
+          current = section.id;
+        }
+      });
+
+      if (current) {
+        setSelected(current);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleNavClick = (id: string) => {
     setSelected(id);
@@ -110,7 +136,10 @@ const Navbar: React.FC = () => {
           })}
         </ul>
         <div className="ml-auto hidden sm:flex">
-          <RegisterNowButton href="#register" />
+          <RegisterNowButton
+            href="#register"
+            isActive={selected === "register"}
+          />
         </div>
         {menuOpen && (
           <div className="animate-fade-in fixed inset-x-0 top-[88px] z-40 h-[70vh] w-full overflow-y-auto rounded-b-xl border-b bg-[var(--background)] sm:hidden">
@@ -131,7 +160,10 @@ const Navbar: React.FC = () => {
               })}
             </ul>
             <div className="mt-[50px] flex justify-center">
-              <RegisterNowButton href="#register" />
+              <RegisterNowButton
+                href="#register"
+                isActive={selected === "register"}
+              />
             </div>
           </div>
         )}

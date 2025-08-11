@@ -309,6 +309,10 @@ h3 {
   );
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @media (min-width: 640px) {
   .venue-title {
     font-size: 36px;
@@ -536,6 +540,7 @@ h3 {
     opacity: 0.4;
     filter: drop-shadow(0 0 5px rgba(35, 255, 170, 0.3));
   }
+
   50% {
     opacity: 1;
     filter: drop-shadow(0 0 15px rgba(35, 255, 170, 0.8));
@@ -548,6 +553,7 @@ h3 {
     opacity: 0.3;
     filter: drop-shadow(0 0 8px rgba(35, 255, 170, 0.4));
   }
+
   50% {
     opacity: 0.9;
     filter: drop-shadow(0 0 20px rgba(35, 255, 170, 0.9));

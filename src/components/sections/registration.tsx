@@ -11,7 +11,7 @@ const Registration = () => {
 
   return (
     <SectionPage
-      id="registration"
+      id="register"
       className="relative bg-[var(--background)] px-4 pt-12 sm:py-16"
     >
       <div className="pointer-events-none absolute top-5 -right-30 z-40 h-[350px] w-[300px] rounded-[40%_60%_30%_70%] bg-[#00FFC5B2] opacity-[40%] blur-[100px] lg:-top-35 lg:-right-24" />
