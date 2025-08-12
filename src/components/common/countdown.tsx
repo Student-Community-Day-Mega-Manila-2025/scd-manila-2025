@@ -17,7 +17,6 @@ const Countdown = () => {
     seconds: 0,
   });
 
-  // Function to calculate time left
   const calculateTimeLeft = (): TimeLeft => {
     const targetDate = new Date("2025-09-17T00:00:00").getTime();
     const now = new Date().getTime();
@@ -37,21 +36,16 @@ const Countdown = () => {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   };
 
-  // Update time every second
   useEffect(() => {
-    // Calculate initial time
     setTimeLeft(calculateTimeLeft());
 
-    // Set up interval to update every second
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(timer);
   }, []);
 
-  // Helper function to format numbers with leading zeros
   const formatNumber = (num: number): string => {
     return num.toString().padStart(1, "0");
   };

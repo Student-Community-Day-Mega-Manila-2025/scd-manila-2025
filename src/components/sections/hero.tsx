@@ -120,7 +120,7 @@ const Hero = () => {
   return (
     <SectionPage
       id="hero"
-      className="relative flex h-[calc(100vh-97px)] max-h-[1200px] w-full justify-center overflow-hidden px-0! py-0!"
+      className="relative mb-0! flex h-[calc(100vh-97px)] max-h-[1200px] w-full justify-center overflow-hidden px-0! py-0!"
     >
       <div className="flex h-full w-full justify-center p-0 xl:max-w-7xl">
         <div className="relative h-full w-full">
