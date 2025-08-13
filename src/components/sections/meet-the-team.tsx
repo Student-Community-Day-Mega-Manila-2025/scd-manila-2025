@@ -132,7 +132,7 @@ const MeetTheTeamSection = () => {
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
                           <Image
-                            src="/Clouds.png"
+                            src="/clouds.png"
                             alt="Clouds"
                             fill
                             className="object-cover"
@@ -193,7 +193,7 @@ const MeetTheTeamSection = () => {
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
                           <Image
-                            src="/Clouds.png"
+                            src="/clouds.png"
                             alt="Clouds"
                             fill
                             className="object-cover"
@@ -254,7 +254,7 @@ const MeetTheTeamSection = () => {
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
                           <Image
-                            src="/Clouds.png"
+                            src="/clouds.png"
                             alt="Clouds"
                             fill
                             className="object-cover"
@@ -315,7 +315,7 @@ const MeetTheTeamSection = () => {
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
                           <Image
-                            src="/Clouds.png"
+                            src="/clouds.png"
                             alt="Clouds"
                             fill
                             className="object-cover"
@@ -376,7 +376,7 @@ const MeetTheTeamSection = () => {
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
                           <Image
-                            src="/Clouds.png"
+                            src="/clouds.png"
                             alt="Clouds"
                             fill
                             className="object-cover"

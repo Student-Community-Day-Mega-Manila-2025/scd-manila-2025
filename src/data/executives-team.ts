@@ -9,24 +9,24 @@ export const executivesTeam = [
     id: 2,
     name: "Kate Callao",
     role: "Event Co-head",
-    image: "/Executives/Callao.jpg",
+    image: "/Executives/Callao.JPG",
   },
   {
     id: 3,
     name: "Gaile Espinosa",
     role: "Event Co-head",
-    image: "/Executives/Espinosa.jpg",
+    image: "/Executives/Espinosa.JPG",
   },
   {
     id: 4,
     name: "Alaine Carino",
     role: "Secretary",
-    image: "/Executives/Cariño.jpg",
+    image: "/Executives/Cariño.JPG",
   },
   {
     id: 5,
     name: "Roan Manansala",
     role: "Finance and Audit Manager",
-    image: "/Executives/Manansala.jpg",
+    image: "/Executives/Manansala.JPG",
   },
 ];
