@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import SectionPage from "../layout/section-page";
 
 const Registration = () => {
@@ -40,16 +39,19 @@ const Registration = () => {
     >
       <div className="pointer-events-none absolute top-5 -right-30 z-40 h-[350px] w-[300px] rounded-[40%_60%_30%_70%] bg-[#00FFC5B2] opacity-[40%] blur-[100px] lg:-top-35 lg:-right-24" />
       <div className="absolute -top-20 -right-20 z-10 h-[270px] w-[230px] opacity-60 lg:-top-40 lg:-right-40 lg:h-[550px] lg:w-[450px]">
-        <Image src="/planet.png" alt="Planet" fill className="object-cover" />
+        <img
+          src="/planet.png"
+          alt="Planet"
+          className="h-full w-full object-cover"
+        />
       </div>
 
       <div className="pointer-events-none absolute -bottom-28 -left-24 z-40 hidden h-[400px] w-[300px] rounded-[40%_60%_30%_70%] bg-[#00FFC5B2] opacity-[40%] blur-[100px] lg:block" />
       <div className="absolute -bottom-25 -left-10 z-10 h-[170px] w-[130px] opacity-60 lg:-bottom-48 lg:-left-35 lg:h-[450px] lg:w-[350px]">
-        <Image
+        <img
           src="/ringed_planet.png"
           alt="Planet"
-          fill
-          className="object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
 
@@ -69,14 +71,14 @@ const Registration = () => {
             onMouseEnter={() => setMobileHoveredTicket("regular")}
             onMouseLeave={() => setMobileHoveredTicket(null)}
           >
-            <Image
+            <img
               src="/right_cloud.png"
               alt="Left Cloud"
               width={160}
               height={80}
               className="absolute top-0 right-0"
             />
-            <Image
+            <img
               src="/left_cloud.png"
               alt="Left Cloud"
               width={160}
@@ -128,14 +130,14 @@ const Registration = () => {
             onMouseEnter={() => setMobileHoveredTicket("pro")}
             onMouseLeave={() => setMobileHoveredTicket(null)}
           >
-            <Image
+            <img
               src="/right_cloud.png"
               alt="Left Cloud"
               width={160}
               height={80}
               className="absolute top-0 right-0"
             />
-            <Image
+            <img
               src="/left_cloud.png"
               alt="Left Cloud"
               width={160}

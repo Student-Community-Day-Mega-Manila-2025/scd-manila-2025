@@ -4,7 +4,6 @@ import SectionPage from "@/components/layout/section-page";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import Image from "next/image";
 import { programsTeam } from "@/data/programs-team";
 import { multimediaTeam } from "@/data/multimedia-team";
 import { operationsTeam } from "@/data/operations-team";
@@ -57,7 +56,11 @@ const MeetTheTeamSection = () => {
       />
 
       <div className="absolute top-100 -right-35 z-30 hidden h-[600px] w-[560px] lg:block">
-        <Image src="/planet.png" alt="Planet" fill className="object-cover" />
+        <img
+          src="/planet.png"
+          alt="Planet"
+          className="h-full w-full object-cover"
+        />
       </div>
       <div
         className="pointer-events-none absolute top-100 -right-40 z-10 hidden h-[850px] w-[700px] rounded-[40%_60%_30%_70%] opacity-95 blur-[70px] lg:block"
@@ -67,7 +70,11 @@ const MeetTheTeamSection = () => {
         }}
       />
       <div className="absolute top-190 right-20 z-30 hidden h-[200px] w-[400px] lg:block">
-        <Image src="/Cloud-2.png" alt="Planet" fill className="object-cover" />
+        <img
+          src="/Cloud-2.png"
+          alt="Planet"
+          className="h-full w-full object-cover"
+        />
       </div>
 
       <div className="pointer-events-none absolute -right-30 bottom-25 z-20 hidden h-[550px] w-[250px] rounded-[40%_60%_30%_70%] bg-[#00ffc3f4] opacity-[60%] blur-[100px] lg:block" />
@@ -123,19 +130,17 @@ const MeetTheTeamSection = () => {
                         }}
                       >
                         <div className="absolute -bottom-5 left-0 z-20 h-[120px] w-[120px]">
-                          <Image
+                          <img
                             src="/clouds_front.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
-                          <Image
+                          <img
                             src="/clouds.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="absolute bottom-0 left-0 z-20 flex w-fit flex-col justify-center px-2 text-left">
@@ -184,19 +189,17 @@ const MeetTheTeamSection = () => {
                         }}
                       >
                         <div className="absolute -bottom-5 left-0 z-20 h-[120px] w-[120px]">
-                          <Image
+                          <img
                             src="/clouds_front.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
-                          <Image
+                          <img
                             src="/clouds.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="absolute bottom-0 left-0 z-20 flex w-fit flex-col justify-center px-2 text-left">
@@ -245,19 +248,17 @@ const MeetTheTeamSection = () => {
                         }}
                       >
                         <div className="absolute -bottom-5 left-0 z-20 h-[120px] w-[120px]">
-                          <Image
+                          <img
                             src="/clouds_front.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
-                          <Image
+                          <img
                             src="/clouds.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="absolute bottom-0 left-0 z-20 flex w-fit flex-col justify-center px-2 text-left">
@@ -306,19 +307,17 @@ const MeetTheTeamSection = () => {
                         }}
                       >
                         <div className="absolute -bottom-5 left-0 z-20 h-[120px] w-[120px]">
-                          <Image
+                          <img
                             src="/clouds_front.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
-                          <Image
+                          <img
                             src="/clouds.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="absolute bottom-0 left-0 z-20 flex w-fit flex-col justify-center px-2 text-left">
@@ -367,19 +366,17 @@ const MeetTheTeamSection = () => {
                         }}
                       >
                         <div className="absolute -bottom-5 left-0 z-20 h-[120px] w-[120px]">
-                          <Image
+                          <img
                             src="/clouds_front.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="z-20 h-full w-full opacity-50">
-                          <Image
+                          <img
                             src="/clouds.png"
                             alt="Clouds"
-                            fill
-                            className="object-cover"
+                            className="h-full w-full object-cover"
                           />
                         </div>
                         <div className="absolute bottom-0 left-0 z-20 flex w-fit flex-col justify-center px-2 text-left">
