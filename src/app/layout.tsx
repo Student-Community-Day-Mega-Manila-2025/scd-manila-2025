@@ -26,9 +26,6 @@ export const metadata: Metadata = {
   title: "AWS Student Community Mega Manila 2025",
   description:
     "AWS Cloud Clubs Philippines is excited to host the first AWS Student Community Mega Manila this August 2025. Join us to learn from the story and advocacy of the community, industry, and academe experts, and many more AWSomeness.",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({
