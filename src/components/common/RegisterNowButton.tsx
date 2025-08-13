@@ -1,14 +1,13 @@
 import React from "react";
-import Link from "next/link";
 
 type RegisterNowButtonProps = {
-  href: string;
+  href?: string;
   isActive?: boolean;
   className?: string;
 };
 
 const RegisterNowButton: React.FC<RegisterNowButtonProps> = ({
-  href,
+  href = "https://tinyurl.com/AWSSCD-RegistrationForm",
   isActive = false,
   className = "",
 }) => {
@@ -16,8 +15,10 @@ const RegisterNowButton: React.FC<RegisterNowButtonProps> = ({
     "rounded-[30.545px] border-[color:var(--Hovered-borderline,#F8F7FC)] bg-[linear-gradient(137deg,_#CCF7ED_7.8%,_#01D5A4_59.9%,_#99EEDB_98.82%,_#34DDB6_126.64%)] shadow-[0_0_8.145px_0_#66F7F7]";
 
   return (
-    <Link
+    <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`group inline-block no-underline ${className}`}
     >
       <span
@@ -27,7 +28,7 @@ const RegisterNowButton: React.FC<RegisterNowButtonProps> = ({
           REGISTER NOW
         </span>
       </span>
-    </Link>
+    </a>
   );
 };
 
