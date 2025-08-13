@@ -1,38 +1,32 @@
 export const programsTeam = [
   {
     id: 1,
-    name: "John Doe",
-    role: "Event Director",
+    name: "Ellianna Cecilia Principe",
+    role: "Programs Head",
     image: "/person.jpg", // Using existing image from public folder
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "Program Coordinator",
+    name: "Nehemiah Andrew Dizon",
+    role: "Stage Manager",
     image: "/person.jpg",
   },
   {
     id: 3,
-    name: "Mike Johnson",
-    role: "Technical Lead",
+    name: "Francis Jason Chuaunsu",
+    role: "Stage Manager",
     image: "/person.jpg",
   },
   {
     id: 4,
-    name: "Sarah Wilson",
-    role: "Marketing Manager",
+    name: "Kurt Cantuba",
+    role: "Stage Manager",
     image: "/person.jpg",
   },
   {
     id: 5,
-    name: "David Brown",
-    role: "Operations Manager",
-    image: "/person.jpg",
-  },
-  {
-    id: 6,
-    name: "Lisa Davis",
-    role: "Content Creator",
+    name: "Gabriel Marcus Bote",
+    role: "Technical Lead",
     image: "/person.jpg",
   },
 ];

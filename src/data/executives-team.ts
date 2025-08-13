@@ -1,38 +1,32 @@
 export const executivesTeam = [
   {
     id: 1,
-    name: "John Doe",
-    role: "Event Director",
+    name: "Kimi Annika Villareal",
+    role: "Event Head",
     image: "/person.jpg", // Using existing image from public folder
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "Program Coordinator",
+    name: "Kate Callao",
+    role: "Event Co-head",
     image: "/person.jpg",
   },
   {
     id: 3,
-    name: "Mike Johnson",
-    role: "Technical Lead",
+    name: "Gaile Espinosa",
+    role: "Event Co-head",
     image: "/person.jpg",
   },
   {
     id: 4,
-    name: "Sarah Wilson",
-    role: "Marketing Manager",
+    name: "Alaine Carino",
+    role: "Secretary",
     image: "/person.jpg",
   },
   {
     id: 5,
-    name: "David Brown",
-    role: "Operations Manager",
-    image: "/person.jpg",
-  },
-  {
-    id: 6,
-    name: "Lisa Davis",
-    role: "Content Creator",
+    name: "Roan Manansala",
+    role: "Finance and Audit Manager",
     image: "/person.jpg",
   },
 ];
