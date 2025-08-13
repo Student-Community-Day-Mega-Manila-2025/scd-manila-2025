@@ -9,6 +9,7 @@ import { programsTeam } from "@/data/programs-team";
 import { multimediaTeam } from "@/data/multimedia-team";
 import { operationsTeam } from "@/data/operations-team";
 import { executivesTeam } from "@/data/executives-team";
+import { websiteTeam } from "@/data/website-team";
 
 const settings = {
   infinite: true,
@@ -92,6 +93,67 @@ const MeetTheTeamSection = () => {
         </div>
 
         <div className="space-y-6 md:space-y-16">
+          <div className="relative sm:flex-row sm:items-center">
+            <div
+              className="absolute -top-5 -left-5 z-20 hidden h-[320px] w-1/2 items-center lg:flex"
+              style={{
+                background:
+                  "linear-gradient(90deg, #071311 49.52%, rgba(7, 19, 17, 0.00) 100%)",
+              }}
+            >
+              <h3 className="font-cinzel mb-4 pl-12 text-left text-2xl font-extrabold text-white">
+                WEBSITE
+              </h3>
+            </div>
+            <h3 className="font-cinzel !text-left text-[16px] text-white lg:hidden">
+              WEBSITE
+            </h3>
+            <div className="flex-1 overflow-hidden">
+              <Slider {...settings}>
+                {websiteTeam.map((member) => (
+                  <div key={member.id} className="px-2">
+                    <div className="flex flex-col items-center text-center">
+                      <div
+                        className="relative mb-4 flex h-[280px] w-[200px] items-center justify-center overflow-hidden rounded-xl border-2 border-[#01D5A4] bg-gray-300"
+                        style={{
+                          backgroundImage: `url(${member.image})`,
+                          backgroundSize: "cover",
+                          backgroundPosition: "center",
+                          backgroundRepeat: "no-repeat",
+                        }}
+                      >
+                        <div className="absolute -bottom-5 left-0 z-20 h-[120px] w-[120px]">
+                          <Image
+                            src="/clouds_front.png"
+                            alt="Clouds"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="z-20 h-full w-full opacity-50">
+                          <Image
+                            src="/Clouds.png"
+                            alt="Clouds"
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="absolute bottom-0 left-0 z-20 flex w-fit flex-col justify-center px-2 text-left">
+                          <p className="text-sm font-semibold text-[#EBE128]">
+                            {member.role}
+                          </p>
+                          <h5 className="text-md font-bold text-white">
+                            {member.name}
+                          </h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+
           <div className="relative sm:flex-row sm:items-center">
             <div
               className="absolute -top-5 -left-5 z-20 hidden h-[320px] w-1/2 items-center lg:flex"
