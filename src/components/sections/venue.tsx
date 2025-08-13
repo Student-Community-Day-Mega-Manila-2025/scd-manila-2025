@@ -6,10 +6,10 @@ import { FaRegClock, FaDirections } from "react-icons/fa";
 import { IoLocationOutline, IoLink } from "react-icons/io5";
 
 const MAP_SOURCES = {
-  oneAyala:
-    "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d30891.84298517135!2d121.02045107577025!3d14.571681848296034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397c95b0494f8cf%3A0x38bcb0d8f0bb8b77!2sOne%20Ayala%20(Ayala%20Malls)%2C%20Ayala%20Avenue%2C%20Makati%20City%2C%20Metro%20Manila!3m2!1d14.550449299999999!2d121.0278251!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2s80%20Shaw%20Blvd%2C%20Mandaluyong%20City%2C%201552%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1754241806282!5m2!1sen!2sph",
-  marketMarket:
-    "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15457.703907136813!2d121.04659348193898!3d14.56232217322356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397c8f2ca652c83%3A0x62c8011c6abe662e!2sMarket*21%20Market*21%2C%20McKinley%20Parkway%2C%20Taguig%2C%20Metro%20Manila!3m2!1d14.5502545!2d121.0561214!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2s80%20Shaw%20Blvd%2C%20Mandaluyong%20City%2C%201552%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1754241863425!5m2!1sen!2sph",
+  stopAndShop:
+    "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7722.06361197209!2d121.01529044004666!3d14.597263526114416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397c9006565f65d%3A0x32160536a4dabeab!2sStarbucks%20LIVE%20Stop%20and%20Shop%20Old%20Sta.%20Mesa%2C%20Old%20Sta.%20Mesa%20Street%2C%20Santa%20Mesa%2C%20Manila%2C%20Metro%20Manila!3m2!1d14.60198!2d121.0121834!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2s80%20Shaw%20Blvd%2C%20Mandaluyong%20City%2C%201552%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1755092234982!5m2!1sen!2sph",
+  cubao:
+    "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d30886.90881384708!2d121.02244123618443!3d14.606844875195785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397b7c07c719b4d%3A0x3b795e937cd1b0b2!2sAraneta%20City%2C%20Cubao%2C%20Quezon%20City%2C%20Metro%20Manila!3m2!1d14.620878!2d121.0525571!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2s80%20Shaw%20Blvd%2C%20Mandaluyong%20City%2C%201552%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1755092290403!5m2!1sen!2sph",
   default:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d965.2787320446159!2d121.02791556951611!3d14.592526399118313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2sJos%C3%A9%20Rizal%20University!5e0!3m2!1sen!2sph!4v1754239318551!5m2!1sen!2sph",
 } as const;
@@ -34,8 +34,8 @@ const VENUE_INFO = [
 ] as const;
 
 const DIRECTION_BUTTONS = [
-  { key: "oneAyala", label: "From One Ayala" },
-  { key: "marketMarket", label: "From Market Market" },
+  { key: "stopAndShop", label: "From Stop and Shop" },
+  { key: "cubao", label: "From Cubao" },
 ] as const;
 
 const DirectionButton: React.FC<{
@@ -78,10 +78,10 @@ const Venue = () => {
   }, [selectedDirection]);
 
   const mapTitle = useMemo(() => {
-    if (selectedDirection === "oneAyala")
-      return "Directions from One Ayala to José Rizal University";
-    if (selectedDirection === "marketMarket")
-      return "Directions from Market Market to José Rizal University";
+    if (selectedDirection === "stopAndShop")
+      return "Directions from Stop and Shop to José Rizal University";
+    if (selectedDirection === "cubao")
+      return "Directions from Cubao to José Rizal University";
     return "José Rizal University - Event Venue";
   }, [selectedDirection]);
 
