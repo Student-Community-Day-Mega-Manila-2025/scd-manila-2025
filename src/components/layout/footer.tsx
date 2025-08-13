@@ -33,21 +33,27 @@ const Footer = () => {
 
             <div className="mt-6 flex justify-center space-x-4 sm:mt-0 sm:justify-start sm:space-x-6">
               <a
-                href="#"
+                href="https://www.tiktok.com/@awscloudclubsph"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white transition-colors duration-200 hover:text-[#01d5a4]"
                 aria-label="TikTok"
               >
                 <FaTiktok size={20} className="sm:h-6 sm:w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/AWSCloudClubsPhilippines"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white transition-colors duration-200 hover:text-[#01d5a4]"
                 aria-label="Facebook"
               >
                 <FaFacebook size={20} className="sm:h-6 sm:w-6" />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/aws-cloud-club-philippines"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white transition-colors duration-200 hover:text-[#01d5a4]"
                 aria-label="LinkedIn"
               >
