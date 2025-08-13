@@ -65,7 +65,7 @@ const Registration = () => {
           {/* Regular Pass Mobile */}
           <div
             className="relative flex h-[110px] w-[340px] items-center justify-center rounded-3xl border-[3px] border-[#00FFC6] bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out"
-            style={{ backgroundImage: 'url("/Clouds.png")' }}
+            style={{ backgroundImage: 'url("/clouds.png")' }}
             onMouseEnter={() => setMobileHoveredTicket("regular")}
             onMouseLeave={() => setMobileHoveredTicket(null)}
           >
@@ -124,7 +124,7 @@ const Registration = () => {
           {/* Pro Pass Mobile */}
           <div
             className="relative flex h-[110px] w-[340px] items-center justify-center rounded-3xl border-[3px] border-[#00FFC6] bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out"
-            style={{ backgroundImage: 'url("/Clouds.png")' }}
+            style={{ backgroundImage: 'url("/clouds.png")' }}
             onMouseEnter={() => setMobileHoveredTicket("pro")}
             onMouseLeave={() => setMobileHoveredTicket(null)}
           >
@@ -192,7 +192,7 @@ const Registration = () => {
         <div className="mt-12 hidden w-full items-center justify-center gap-28 md:flex">
           <div
             className="relative flex h-[321px] w-[475px] items-center justify-center rounded-3xl border-[3px] border-[#00FFC6] bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out"
-            style={{ backgroundImage: 'url("/Clouds.png")' }}
+            style={{ backgroundImage: 'url("/clouds.png")' }}
             onMouseEnter={() => setHoveredTicket("regular")}
             onMouseLeave={() => setHoveredTicket(null)}
           >
@@ -234,7 +234,7 @@ const Registration = () => {
 
           <div
             className="relative flex h-[321px] w-[475px] items-center justify-center overflow-hidden rounded-3xl border-[3px] border-[#00FFC6] bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out"
-            style={{ backgroundImage: 'url("/Clouds.png")' }}
+            style={{ backgroundImage: 'url("/clouds.png")' }}
             onMouseEnter={() => setHoveredTicket("pro")}
             onMouseLeave={() => setHoveredTicket(null)}
           >
