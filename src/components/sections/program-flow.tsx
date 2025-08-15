@@ -1,14 +1,26 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import Sticky from "react-stickynode";
 import programData from "@/data/program-flow.json";
 import CustomDropdown from "@/components/common/CustomDropdown";
 import SectionPage from "@/components/layout/section-page";
 
+type Track = {
+  id: string;
+  trackName: string;
+  activities: { time: string; title: string }[];
+};
+const tracks = programData as Track[];
 const ProgramFlow = () => {
-  const [activeTrack, setActiveTrack] = useState(programData[0]?.id);
+  const [expandedTracks, setExpandedTracks] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  const handleOpenAll = (trackId: string) => {
+    setExpandedTracks((prev) => ({ ...prev, [trackId]: !prev[trackId] }));
+  };
+  const [activeTrack, setActiveTrack] = useState(tracks[0]?.id);
   const trackRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const containerRef = useRef<HTMLDivElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
@@ -43,12 +55,13 @@ const ProgramFlow = () => {
       const offset = 200;
 
       // Find which track section is currently in view
-      for (let i = programData.length - 1; i >= 0; i--) {
-        const trackElement = trackRefs.current[programData[i].id];
+      for (let i = tracks.length - 1; i >= 0; i--) {
+        const track = tracks[i];
+        const trackElement = trackRefs.current[track.id];
         if (trackElement) {
           const elementTop = trackElement.offsetTop + containerTop;
           if (scrollPosition + offset >= elementTop) {
-            setActiveTrack(programData[i].id);
+            setActiveTrack(track.id);
             break;
           }
         }
@@ -80,10 +93,8 @@ const ProgramFlow = () => {
   }, []);
 
   const getActiveTrackName = () => {
-    const activeTrackData = programData.find(
-      (track) => track.id === activeTrack
-    );
-    return activeTrackData?.trackName || programData[0]?.trackName || "";
+    const activeTrackData = tracks.find((track) => track.id === activeTrack);
+    return activeTrackData?.trackName || tracks[0]?.trackName || "";
   };
 
   return (
@@ -108,7 +119,7 @@ const ProgramFlow = () => {
             enableTransforms={true}
           >
             <CustomDropdown
-              options={programData.map((track) => ({
+              options={tracks.map((track) => ({
                 value: track.id,
                 label: track.trackName,
                 count: track.activities.length,
@@ -136,7 +147,7 @@ const ProgramFlow = () => {
             >
               <aside className="w-full">
                 <ul className="flex flex-col gap-[22px]">
-                  {programData.map((track) => (
+                  {tracks.map((track) => (
                     <div
                       key={track.id}
                       onClick={() => handleDropdownChange(track.id)}
@@ -165,7 +176,7 @@ const ProgramFlow = () => {
             id="program-main-content"
             className="flex-1 md:ml-8 lg:ml-12"
           >
-            {programData.map((track) => (
+            {tracks.map((track) => (
               <div
                 key={track.id}
                 ref={(el) => {
@@ -177,16 +188,26 @@ const ProgramFlow = () => {
                   <h4 className="text-sm font-bold text-white lg:text-xl">
                     {track.trackName}
                   </h4>
-                  <div className="min-w-fit cursor-pointer border-b-2 border-white text-sm font-medium text-white transition-opacity hover:opacity-80 lg:text-lg">
-                    Open All
+                  <div
+                    className="min-w-fit cursor-pointer border-b-2 border-white text-sm font-medium text-white transition-opacity hover:opacity-80 lg:text-lg"
+                    onClick={() => handleOpenAll(track.id)}
+                  >
+                    {expandedTracks[track.id] ? "Show Less" : "Open All"}
                   </div>
                 </div>
                 <div className="flex flex-col">
-                  {track.activities.map((activity, index) => (
+                  {(expandedTracks[track.id]
+                    ? track.activities
+                    : track.activities.slice(0, 5)
+                  ).map((activity, index) => (
                     <div
                       key={`${activity.title}-${index}`}
                       className={`lg:text-md flex items-center justify-between gap-4 py-3 text-xs font-normal text-white lg:py-6 lg:font-bold ${
-                        index < track.activities.length - 1
+                        index <
+                        (expandedTracks[track.id]
+                          ? track.activities.length
+                          : Math.min(track.activities.length, 5)) -
+                          1
                           ? "border-b border-white"
                           : ""
                       }`}
@@ -195,14 +216,6 @@ const ProgramFlow = () => {
                         {activity.time}
                       </div>
                       <div className="flex-1 lg:px-4">{activity.title}</div>
-                      <div className="cursor-pointer transition-opacity hover:opacity-80">
-                        <Image
-                          src="/plus.svg"
-                          alt="plus"
-                          width={24}
-                          height={24}
-                        />
-                      </div>
                     </div>
                   ))}
                 </div>
