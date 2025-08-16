@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { href: "#program-flow", label: "Program" },
   // { href: "#sponsors-and-partners", label: "Sponsors" },
   // { href: "#faqs", label: "FAQs" },
-  { href: "#team", label: "Team" },
+  //{ href: "#team", label: "Team" },
 ];
 
 type NavLinkProps = {

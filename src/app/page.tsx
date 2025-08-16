@@ -1,7 +1,6 @@
 import Countdown from "@/components/common/countdown";
 import EventInfo from "@/components/sections/event-info";
 import Hero from "@/components/sections/hero";
-import MeetTheTeamSection from "@/components/sections/meet-the-team";
 import ProgramFlow from "@/components/sections/program-flow";
 import Registration from "@/components/sections/registration";
 import Venue from "@/components/sections/venue";
@@ -18,7 +17,7 @@ export default function Home() {
       {/* <SponsorsAndPartners /> */}
       {/* <FaqSection /> */}
       <Registration />
-      <MeetTheTeamSection />
+      {/* <MeetTheTeamSection /> */}
     </main>
   );
 }

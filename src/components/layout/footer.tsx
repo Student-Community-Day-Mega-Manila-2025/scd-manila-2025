@@ -100,14 +100,14 @@ const Footer = () => {
                     Sponsors
                   </a>
                 </li> */}
-                <li className="text-left">
+                {/* <li className="text-left">
                   <a
                     href="#team"
                     className="font-montserrat text-[12px] transition-colors duration-200 hover:text-[#01d5a4] sm:text-[15px] lg:text-[16px]"
                   >
                     Team
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
 
