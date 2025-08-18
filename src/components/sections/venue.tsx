@@ -6,8 +6,7 @@ import { FaRegClock, FaDirections } from "react-icons/fa";
 import { IoLocationOutline, IoLink } from "react-icons/io5";
 
 const MAP_SOURCES = {
-  stopAndShop:
-    "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7722.06361197209!2d121.01529044004666!3d14.597263526114416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397c9006565f65d%3A0x32160536a4dabeab!2sStarbucks%20LIVE%20Stop%20and%20Shop%20Old%20Sta.%20Mesa%2C%20Old%20Sta.%20Mesa%20Street%2C%20Santa%20Mesa%2C%20Manila%2C%20Metro%20Manila!3m2!1d14.60198!2d121.0121834!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2s80%20Shaw%20Blvd%2C%20Mandaluyong%20City%2C%201552%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1755092234982!5m2!1sen!2sph",
+  pitx: "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d61788.86436960578!2d120.97068715704114!3d14.553196847324195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3397cf11c7bbd645%3A0x4a466429af6812af!2sPara%C3%B1aque%20Integrated%20Terminal%20Exchange%20(PITx)%2C%20Para%C3%B1aque%2C%20Metro%20Manila!3m2!1d14.5100626!2d120.99125649999999!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2sJos%C3%A9%20Rizal%20University%2C%20Shaw%20Boulevard%2C%20Mandaluyong%20City%2C%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1755497249068!5m2!1sen!2sph",
   cubao:
     "https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d30886.90881384708!2d121.02244123618443!3d14.606844875195785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3397b7c07c719b4d%3A0x3b795e937cd1b0b2!2sAraneta%20City%2C%20Cubao%2C%20Quezon%20City%2C%20Metro%20Manila!3m2!1d14.620878!2d121.0525571!4m5!1s0x3397c9cdec00e801%3A0x90ebd52dbd050466!2s80%20Shaw%20Blvd%2C%20Mandaluyong%20City%2C%201552%20Metro%20Manila!3m2!1d14.592526399999999!2d121.0285593!5e0!3m2!1sen!2sph!4v1755092290403!5m2!1sen!2sph",
   default:
@@ -34,7 +33,7 @@ const VENUE_INFO = [
 ] as const;
 
 const DIRECTION_BUTTONS = [
-  { key: "stopAndShop", label: "From Stop and Shop" },
+  { key: "pitx", label: "From PITX" },
   { key: "cubao", label: "From Cubao" },
 ] as const;
 
@@ -78,8 +77,8 @@ const Venue = () => {
   }, [selectedDirection]);
 
   const mapTitle = useMemo(() => {
-    if (selectedDirection === "stopAndShop")
-      return "Directions from Stop and Shop to José Rizal University";
+    if (selectedDirection === "pitx")
+      return "Directions from PITX to José Rizal University";
     if (selectedDirection === "cubao")
       return "Directions from Cubao to José Rizal University";
     return "José Rizal University - Event Venue";
