@@ -133,7 +133,7 @@ const Hero = () => {
         <RainbowStreak className="absolute top-0 right-8 -z-10 h-1/2 max-h-[500px] w-[20%] blur-[20px]" />
       </div>
 
-      <FourPointedStar className="twinkle absolute top-80 left-1/2 -z-10 h-8 w-8" />
+      <FourPointedStar className="twinkle absolute top-80 right-1/4 -z-10 h-8 w-8" />
       <FourPointedStar className="twinkle absolute top-96 right-1/5 -z-10 h-4 w-4" />
       <FourPointedStar className="twinkle absolute right-1/3 bottom-1/4 -z-10 h-6 w-6 opacity-40!" />
       <FourPointedStar className="twinkle absolute bottom-1/4 left-1/5 -z-10 h-4 w-4" />
