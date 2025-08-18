@@ -137,8 +137,10 @@ const Hero = () => {
       <FourPointedStar className="twinkle absolute top-96 right-1/5 -z-10 h-4 w-4" />
       <FourPointedStar className="twinkle absolute right-1/3 bottom-1/4 -z-10 h-6 w-6 opacity-40!" />
       <FourPointedStar className="twinkle absolute bottom-1/4 left-1/5 -z-10 h-4 w-4" />
+      <FourPointedStar className="twinkle absolute right-1/5 bottom-1/5 -z-10 h-4 w-4" />
       <FourPointedStar className="twinkle absolute bottom-1/5 left-24 -z-10 h-7 w-7 opacity-80!" />
-      <FourPointedStar className="twinkle absolute bottom-32 left-32 -z-10 h-5 w-5 opacity-50!" />
+      <FourPointedStar className="twinkle absolute top-44 left-32 -z-10 h-5 w-5 opacity-50!" />
+      <FourPointedStar className="twinkle absolute top-32 right-1/2 -z-10 h-5 w-5 opacity-50!" />
 
       <GlowingDot className="absolute top-1/4 right-1/4 -z-10" />
       <GlowingDot className="absolute top-1/2 right-24 -z-10" />

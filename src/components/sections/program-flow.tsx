@@ -182,14 +182,14 @@ const ProgramFlow = () => {
                 ref={(el) => {
                   trackRefs.current[track.id] = el;
                 }}
-                className="mb-6 w-full scroll-mt-24 rounded-3xl border-1 border-white px-4 py-3 lg:mb-10 lg:px-9"
+                className="mb-6 w-full scroll-mt-24 rounded-3xl border border-white/75 px-4 py-3 lg:mb-10 lg:px-9"
               >
-                <div className="flex items-center justify-between gap-4 border-b border-white px-2 py-4 lg:gap-0 lg:px-4">
-                  <h4 className="text-sm font-bold text-white lg:text-xl">
+                <div className="flex items-center justify-between gap-4 border-b border-white/25 px-0 py-4 pt-2 lg:gap-0">
+                  <h4 className="text-sm font-bold text-white lg:text-lg">
                     {track.trackName}
                   </h4>
                   <div
-                    className="min-w-fit cursor-pointer border-b-2 border-white text-sm font-medium text-white transition-opacity hover:opacity-80 lg:text-lg"
+                    className="min-w-fit cursor-pointer border-b border-white/75 text-sm font-medium text-white transition-opacity hover:opacity-80 lg:text-base"
                     onClick={() => handleOpenAll(track.id)}
                   >
                     {expandedTracks[track.id] ? "Show Less" : "Open All"}
@@ -202,13 +202,13 @@ const ProgramFlow = () => {
                   ).map((activity, index) => (
                     <div
                       key={`${activity.title}-${index}`}
-                      className={`lg:text-md flex items-center justify-between gap-4 py-3 text-xs font-normal text-white lg:py-6 lg:font-bold ${
+                      className={`lg:text-md flex items-center justify-between gap-4 py-3 text-sm font-normal text-white lg:py-4 lg:font-bold ${
                         index <
                         (expandedTracks[track.id]
                           ? track.activities.length
                           : Math.min(track.activities.length, 5)) -
                           1
-                          ? "border-b border-white"
+                          ? "border-b border-white/25"
                           : ""
                       }`}
                     >
