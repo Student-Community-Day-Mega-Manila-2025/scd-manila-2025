@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { href: "#event-info", label: "About Event" },
   { href: "#program-flow", label: "Program" },
   // { href: "#sponsors-and-partners", label: "Sponsors" },
-  // { href: "#faqs", label: "FAQs" },
+  { href: "#faqs", label: "FAQs" },
   //{ href: "#team", label: "Team" },
 ];
 

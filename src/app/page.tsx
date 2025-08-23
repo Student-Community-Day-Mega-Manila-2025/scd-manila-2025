@@ -4,6 +4,7 @@ import Hero from "@/components/sections/hero";
 import ProgramFlow from "@/components/sections/program-flow";
 import Registration from "@/components/sections/registration";
 import Venue from "@/components/sections/venue";
+import FaqSection from "@/components/sections/faqs";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       <ProgramFlow />
       {/* <Speakers /> */}
       {/* <SponsorsAndPartners /> */}
-      {/* <FaqSection /> */}
+      <FaqSection />
       <Registration />
       {/* <MeetTheTeamSection /> */}
     </main>
