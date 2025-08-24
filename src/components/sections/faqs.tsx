@@ -2,19 +2,7 @@
 
 import SectionPage from "@/components/layout/section-page";
 import React, { useState } from "react";
-
-const faqs = [
-  {
-    question: "How can I participate in AWS Cloud Day Philippines?",
-    answer:
-      "All attendees must be registered to take part in the event. A confirmation email will be sent to confirm your seat. Entry to the event is subject to venue capacity and organizer’s discretion. As in years past, AWS event attendees will be asked to provide a government-issued ID at registration in order to receive your badge. The name on your registration must match the name on your ID card. Walk-in registrations are not advised.",
-  },
-  {
-    question: "Is it compulsory to attend all the sessions?",
-    answer:
-      "All attendees must be registered to take part in the event. A confirmation email will be sent to confirm your seat. Entry to the event is subject to venue capacity and organizer’s discretion. As in years past, AWS event attendees will be asked to provide a government-issued ID at registration in order to receive your badge. The name on your registration must match the name on your ID card. Walk-in registrations are not advised.",
-  },
-];
+import faqs from "@/data/faqs.json";
 
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -94,7 +82,10 @@ const FaqSection = () => {
                     isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <p className="font-sans text-sm font-normal tracking-[0.08px] text-[color:var(--color-primary-500)] sm:text-base">
+                  <p
+                    className="font-sans text-sm font-normal tracking-[0.08px] text-[color:var(--color-primary-500)] sm:text-base"
+                    style={{ whiteSpace: "pre-line" }}
+                  >
                     {faq.answer}
                   </p>
                 </div>
