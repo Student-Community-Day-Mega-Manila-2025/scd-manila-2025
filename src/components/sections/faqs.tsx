@@ -17,20 +17,26 @@ const FaqSection = () => {
       id="faqs"
       className="relative overflow-hidden bg-[var(--background)] py-12 sm:py-16 lg:px-4"
     >
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Headings */}
+      {/* --- BACKGROUND ELEMENTS --- */}
+      <div className="pointer-events-none absolute inset-0 z-0">
+        <div className="faq-bg-moon">
+          <img src="crescent-moon.png" alt="Crescent Moon" />
+          <img src="2-clouds.png" alt="Clouds" className="clouds" />
+          <div className="absolute top-[20%] right-0 h-[200px] w-[300px] rounded-full bg-[var(--Primary-Brand-50,#01D5A4)] opacity-50 blur-[80px]" />
+        </div>
+        <div className="absolute top-1/2 left-0 h-[200px] w-[200px] rounded-full bg-[var(--Primary-Brand-50,#01D5A4)] opacity-50 blur-[120px]" />
+      </div>
+      {/* --- FAQ CONTENTS --- */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 pb-2 text-left sm:mb-8">
           <h3 className="venue-subtitle">Need Help?</h3>
           <h2 className="venue-title">Frequently Asked Questions</h2>
         </div>
-
-        {/* Accordion */}
         <div className="flex w-full max-w-[749px] flex-col gap-4">
           {faqs.map((faq, index) => {
             const isOpen = openIndices.includes(index);
             return (
               <div key={index} className="flex flex-col gap-2">
-                {/* Question Row */}
                 <button
                   onClick={() => toggleAccordion(index)}
                   className="group flex items-center justify-between gap-6 text-left transition-all duration-300 hover:text-[var(--Primary-Brand-50,#01D5A4)] hover:[text-shadow:_0_0_4px_#AEDCD1FF]"
@@ -44,8 +50,6 @@ const FaqSection = () => {
                   >
                     {faq.question}
                   </span>
-
-                  {/* Toggle Icon */}
                   <div className="flex h-[22px] w-[22px] items-center justify-center">
                     {isOpen ? (
                       <svg
@@ -72,8 +76,6 @@ const FaqSection = () => {
                     )}
                   </div>
                 </button>
-
-                {/* Answer with animation */}
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
@@ -86,8 +88,6 @@ const FaqSection = () => {
                     {faq.answer}
                   </p>
                 </div>
-
-                {/* Divider */}
                 <div
                   className={`h-0 self-stretch border-b transition-colors duration-300 ${
                     isOpen ? "border-[#efe753]" : "border-primary-500"
