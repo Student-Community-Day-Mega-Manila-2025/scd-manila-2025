@@ -4,43 +4,47 @@
     "trackName": "Morning Plenary",
     "activities": [
       {
-        "time": "9:00 AM - 10:30 AM",
+        "time": "7:30 AM - 8:30 AM",
         "title": "Registration and Check in of Attendees"
       },
       {
-        "time": "10:30 AM",
+        "time": "8:30 AM ",
         "title": "Start of Program"
       },
       {
-        "time": "10:30 AM - 10:40 AM",
-        "title": "Opening Remarks"
+        "time": "8:40 AM - 8:50 AM",
+        "title": "Welcoming Remarks"
       },
       {
-        "time": "10:40 AM - 11:00 AM",
+        "time": "8:50 AM - 9:20 AM",
         "title": "Keynote Address: Empower Youth-Driven Tech Advocacy and Culture"
       },
       {
-        "time": "11:00 AM - 11:32 AM",
+        "time": "9:20 AM - 9:47 AM",
         "title": "Speaker 1 Session: Strengthen Campus Cloud Learning Initiatives"
       },
       {
-        "time": "11:32 AM - 11:37 AM",
-        "title": "Platinum Sponsor Slot"
+        "time": "9:47 AM - 9:57 AM",
+        "title": "Ice Breaker - What's the Meme?"
       },
       {
-        "time": "11:37 AM - 11:47 AM",
-        "title": "Ice Breaker/Raffle Time"
-      },
-      {
-        "time": "11:47 AM - 12:19 PM",
+        "time": "9:57 AM - 10:24 AM",
         "title": "Speaker 2 Session: Empower Students for Cloud Careers"
       },
       {
-        "time": "12:19 PM - 12:24 PM",
+        "time": "10:24 AM - 10:34 AM",
         "title": "Platinum Sponsor Slot"
       },
       {
-        "time": "12:24 PM - 1:54 PM",
+        "time": "10:34 AM - 11:10 AM",
+        "title": "Panel Discussion Beyond the Degree: Building Industry-Ready Graduates"
+      },
+      {
+        "time": "11:10 AM - 11:20 AM",
+        "title": "JRU Event Promotion"
+      },
+      {
+        "time": "11:20 AM - 1:05 PM",
         "title": "Lunch Break and Roam around Booths"
       }
     ]
@@ -50,59 +54,39 @@
     "trackName": "Afternoon Plenary",
     "activities": [
       {
-        "time": "1:54 PM - 1:59 PM",
+        "time": "1:05 PM - 1:15 PM",
         "title": "Platinum Sponsor Slot"
       },
       {
-        "time": "1:59 PM - 2:31 PM",
-        "title": "Fireside Chat about Gen AI"
+        "time": "1:15 PM - 1:42 PM",
+        "title": "Speaker 3 Session: Empower Students for Cloud Careers"
       },
       {
-        "time": "2:31 PM - 2:41 PM",
-        "title": "Ice Breaker/Raffle Time"
+        "time": "1:42 PM - 2:18 PM",
+        "title": "Panel Discussion From Campus to Career: Building Bridges for Industry-Ready Students"
       },
       {
-        "time": "2:41 PM - 3:13 PM",
-        "title": "Speaker 3 Session: Cloud Journey: Overcoming Barriers and Building Skills"
+        "time": "2:18 PM - 2:28 PM",
+        "title": "Message of Gratitude and Farewell"
       },
       {
-        "time": "3:13 PM - 3:18 PM",
-        "title": "Platinum Sponsor Slot"
-      },
-      {
-        "time": "3:18 PM - 3:59 PM",
-        "title": "Panel Discussion: Industry-Centered \"Beyond the Degree: Building Industry-Ready Graduates\""
-      },
-      {
-        "time": "3:59 PM - 4:04 PM",
-        "title": "Platinum Sponsor Slot"
-      },
-      {
-        "time": "4:04 PM - 4:14 PM",
-        "title": "Ice Breaker/Raffle Time"
-      },
-      {
-        "time": "4:14 PM - 4:55 PM",
-        "title": "Panel Discussion: Academia-Centered \"From Campus to Career: Building Bridges for Industry-Ready Students\""
-      },
-      {
-        "time": "4:55 PM - 5:10 PM",
-        "title": "Acknowledge Graduating Captains"
-      },
-      {
-        "time": "5:10 PM - 5:20 PM",
+        "time": "2:28 PM - 2:38 PM",
         "title": "Closing Remarks"
       },
       {
-        "time": "5:20 PM - 5:30 PM",
+        "time": "2:38 PM - 2:48 PM",
+        "title": "Raffle Time"
+      },
+      {
+        "time": "2:48 PM - 2:53 PM",
         "title": "Wrap Up Session and Picture Taking"
       },
       {
-        "time": "5:30 PM - 6:00 PM",
+        "time": "2:53 PM - 3:00 PM",
         "title": "Networking Session and Participants' Egress"
       },
       {
-        "time": "6:00 PM",
+        "time": "3:00 PM",
         "title": "End of Program"
       }
     ]
@@ -112,48 +96,32 @@
     "trackName": "Technical Workshop",
     "activities": [
       {
-        "time": "1:15 PM - 1:30 PM",
+        "time": "12:15 PM - 12:30 PM",
         "title": "Check in of Workshop Participants"
       },
       {
-        "time": "1:30 PM",
+        "time": "12:30 PM",
         "title": "Start of Program"
       },
       {
-        "time": "1:30 PM - 1:35 PM",
+        "time": "12:30 PM - 12:35 PM",
         "title": "Opening Remarks"
       },
       {
-        "time": "1:35 PM - 1:45 PM",
-        "title": "Introduction to Generative AI & AWS PartyRock"
+        "time": "12:35 PM - 2:35 PM",
+        "title": "Multi-agent Architectures with Strands Agents, MCP, and Amazon Bedrock"
       },
       {
-        "time": "1:45 PM - 1:55 PM",
-        "title": "Introduction to Bedrock and Amazon Q"
-      },
-      {
-        "time": "1:55 PM - 2:10 PM",
-        "title": "Challenge Introduction and Brainstorming Session"
-      },
-      {
-        "time": "2:10 PM - 3:55 PM",
-        "title": "Main Challenge: Build Your AI App!"
-      },
-      {
-        "time": "3:55 PM - 4:50 PM",
-        "title": "Presentations (AI Showdown)"
-      },
-      {
-        "time": "4:50 PM - 5:00 PM",
-        "title": "Voting & Winner Announcement"
-      },
-      {
-        "time": "5:00 PM - 5:05 PM",
+        "time": "2:35 PM - 2:40 PM",
         "title": "Photo Opportunity and Awarding"
       },
       {
-        "time": "5:05 PM - 5:10 PM",
+        "time": "2:40 PM - 2:45 PM",
         "title": "Closing Remarks"
+      },
+      {
+        "time": "2:45 PM",
+        "title": "End of Program"
       }
     ]
   }
