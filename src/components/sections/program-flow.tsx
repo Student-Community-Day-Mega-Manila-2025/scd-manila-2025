@@ -202,7 +202,7 @@ const ProgramFlow = () => {
                   ).map((activity, index) => (
                     <div
                       key={`${activity.title}-${index}`}
-                      className={`lg:text-md flex items-center justify-between gap-4 py-3 text-sm font-normal text-white lg:py-4 lg:font-bold ${
+                      className={`lg:text-md flex py-3 text-sm font-normal text-white lg:py-4 lg:font-bold ${
                         index <
                         (expandedTracks[track.id]
                           ? track.activities.length
@@ -212,10 +212,14 @@ const ProgramFlow = () => {
                           : ""
                       }`}
                     >
-                      <div className="flex max-w-[170px] min-w-[120px] items-center border-r border-white lg:pr-4">
+                      {/* Fixed width time column */}
+                      <div className="w-48 flex-shrink-0 pr-4 text-left lg:w-52">
                         {activity.time}
                       </div>
-                      <div className="flex-1 lg:px-4">{activity.title}</div>
+                      {/* Vertical separator */}
+                      <div className="mr-4 w-px flex-shrink-0 bg-white/25"></div>
+                      {/* Activity title */}
+                      <div className="flex-1 text-left">{activity.title}</div>
                     </div>
                   ))}
                 </div>
